@@ -1,0 +1,84 @@
+{
+  "phase": "3C",
+  "total_golden_examples": 200,
+  "source_candidate_count": 700,
+  "random_seed": 20260912,
+  "bucket_quotas": {
+    "primary_intent": 150,
+    "unclassified": 20,
+    "multi_intent": 15,
+    "ambiguous": 15
+  },
+  "primary_intent_quotas": {
+    "app_store_media_services": 10,
+    "apple_id_icloud_account": 9,
+    "apple_watch": 6,
+    "battery_power_charging": 10,
+    "billing_purchases_subscriptions": 8,
+    "connectivity_network": 9,
+    "device_setup_activation_migration": 9,
+    "hardware_accessories": 10,
+    "keyboard_text_rendering": 10,
+    "mac_computer": 8,
+    "messaging_calls_facetime": 10,
+    "performance_stability": 10,
+    "software_update_os": 26,
+    "store_orders_repairs": 8,
+    "support_contact_experience": 7
+  },
+  "bucket_counts": {
+    "ambiguous": 15,
+    "multi_intent": 15,
+    "primary_intent": 150,
+    "unclassified": 20
+  },
+  "primary_intent_counts": {
+    "app_store_media_services": 16,
+    "apple_id_icloud_account": 10,
+    "apple_watch": 6,
+    "battery_power_charging": 12,
+    "billing_purchases_subscriptions": 9,
+    "connectivity_network": 12,
+    "device_setup_activation_migration": 10,
+    "hardware_accessories": 10,
+    "keyboard_text_rendering": 11,
+    "mac_computer": 8,
+    "messaging_calls_facetime": 11,
+    "performance_stability": 13,
+    "software_update_os": 37,
+    "store_orders_repairs": 8,
+    "support_contact_experience": 7
+  },
+  "multi_intent_examples": 15,
+  "ambiguous_examples": 15,
+  "selection_methodology": {
+    "allocation": "Coverage-first quotas: 150 primary-intent records with explicit rare-intent guarantees, plus 20 unclassified, 15 multi-intent, and 15 ambiguous records.",
+    "ranking": "Difficulty-tag coverage, seeded random tie-breaking, stable tweet-id ordering, and greedy exact/near-duplicate avoidance.",
+    "source_text": "Copied exactly from the Phase 3B candidate pool; no rewriting or annotation was performed."
+  },
+  "difficulty_tag_counts": {
+    "clear_single_intent": 150,
+    "complaint_or_frustration": 68,
+    "historical_retrieval_context": 134,
+    "incomplete_context": 132,
+    "possible_escalation_context": 29,
+    "question_or_missing_detail": 147,
+    "troubleshooting_request": 156
+  },
+  "quality_checks": {
+    "evaluation_fields_are_placeholders": true,
+    "model_answers_generated": false,
+    "source_text_modified": false
+  },
+  "limitations": [
+    "Primary intents reflect Phase 3A discovery labels and are not human gold labels.",
+    "Unclassified records intentionally have no guessed intent label.",
+    "Difficulty tags are sampling metadata, not evaluation judgments.",
+    "The golden set is drawn only from the 700-record Phase 3B pool."
+  ],
+  "output_files": {
+    "golden_set": "outputs\\phase3\\golden_set\\golden_evaluation_set.jsonl",
+    "summary": "outputs\\phase3\\golden_set\\golden_set_summary.json",
+    "report": "outputs\\phase3\\reports\\PHASE3C_GOLDEN_SET_REPORT.md"
+  }
+}

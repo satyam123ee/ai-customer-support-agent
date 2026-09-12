@@ -137,22 +137,39 @@ outputs/phase3/reports/PHASE3B_CANDIDATE_POOL_REPORT.md
 
 ## CURRENT TASK
 
-### Phase 3B — Candidate Pool
+### Phase 3C — Golden Evaluation Set
 
 STATUS: COMPLETE
+
+Goal achieved:
+
+Created a deterministic 200-record golden evaluation set from the locked Phase 3B candidate pool.
+
+Results:
+- 200 records selected with coverage across all 15 primary intents.
+- Bucket distribution: 150 primary-intent, 20 unclassified, 15 multi-intent, and 15 ambiguous.
+- Original source text and metadata preserved exactly.
+- Evaluation fields remain empty placeholders for later human annotation.
+- Independent validation passed for JSONL validity, source membership, text preservation, duplicate safety, bucket totals, and intent coverage.
+
+Files:
+
+outputs/phase3/scripts/build_golden_set.py
+outputs/phase3/golden_set/golden_evaluation_set.jsonl
+outputs/phase3/golden_set/golden_set_summary.json
+outputs/phase3/reports/PHASE3C_GOLDEN_SET_REPORT.md
+work/phase3c_validate.py
 
 ## NEXT STEPS
 
 1. Inspect existing Phase 3A taxonomy.
 2. Inspect AppleSupport conversation data.
 3. Design a reproducible candidate-sampling strategy.
-4. Generate approximately 500–1000 candidate examples.
-5. Save candidate data in a structured format.
-6. Generate a report describing the sampling methodology.
-7. Later create a 150–250 example golden evaluation set.
-8. Later implement/evaluate intent classification.
-9. Later implement response generation and escalation decisions.
-10. Produce final Hiver assignment evaluation/proof.
+4. Later annotate the golden evaluation set manually.
+5. Later implement/evaluate intent classification.
+6. Later implement retrieval and RAG grounding evaluation.
+7. Later implement response generation and escalation decisions.
+8. Produce final Hiver assignment evaluation/proof.
 
 ## Important Constraints
 
