@@ -1,0 +1,1170 @@
+{
+  "phase": "3A",
+  "scope": "Intent taxonomy discovery only",
+  "source": "C:\\Users\\DELL\\Documents\\Codex\\2026-09-12\\excellent-the-new-dataset-is-much\\outputs\\phase2\\data\\applesupport_conversations.jsonl",
+  "methodology": {
+    "approach": "Streaming, deterministic phrase-family matching over actual Phase 2 customer messages.",
+    "intent_count_rationale": "13 recurring phrase families were retained because each appears repeatedly in the corpus and maps to a distinguishable support problem surface. The remaining messages stay explicitly unclassified rather than being forced into a generic label.",
+    "primary_label_rule": "Messages retain all matched labels. For totals, the primary label is the match with the most evidence patterns; the declared intent order breaks ties.",
+    "limitations": [
+      "This is discovery via transparent lexical evidence, not a human-validated final classifier.",
+      "A message can legitimately involve more than one support issue.",
+      "The Phase 2 extraction includes only directly observed TWCS relationship links."
+    ]
+  },
+  "intents": [
+    {
+      "intent_id": "software_update_os",
+      "name": "Software and operating-system updates",
+      "definition": "Problems installing, using, or recovering from iOS, macOS, or software updates.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bios\\b, \\bmacos\\b, \\bhigh sierra\\b, \\bsoftware update, \\bupdate[ds]?\\b, \\bupgrade[ds]?\\b, \\bbeta\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bupdate[ds]?\\b",
+          22233
+        ],
+        [
+          "\\bios\\b",
+          16098
+        ],
+        [
+          "\\bupgrade[ds]?\\b",
+          1898
+        ],
+        [
+          "\\bhigh sierra\\b",
+          906
+        ],
+        [
+          "\\bsoftware update",
+          630
+        ],
+        [
+          "\\bmacos\\b",
+          474
+        ],
+        [
+          "\\bbeta\\b",
+          434
+        ]
+      ],
+      "approximate_number_of_primary_examples": 33170,
+      "percentage_of_all_customer_messages": 27.666,
+      "percentage_of_classified_customer_messages": 45.69,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000115",
+          "text": "@AppleSupport I’m continually getting the “Could Not Activate iPhone” message … any updates on when this will be working?"
+        },
+        {
+          "tweet_id": "1000205",
+          "text": "@115858 is buggy. My dock is gone on iOS 11 #Appleisdoomed https://t.co/l3tFt7DaPc"
+        },
+        {
+          "tweet_id": "1000223",
+          "text": "Wth @115858, I've been clicking \"download &amp; install\" for almost a week now but the update doesn't want to start download. 🤔"
+        },
+        {
+          "tweet_id": "1000229",
+          "text": "@AppleSupport Please. Let the people in charge of the updates to fix the battery issue. Last two iOS updates worsen the battery life."
+        },
+        {
+          "tweet_id": "1001114",
+          "text": "@AppleSupport after updating to iOS 11.0.3, my iPhone 7 will randomly freeze on any app/screen. The buttons won’t even work"
+        }
+      ]
+    },
+    {
+      "intent_id": "battery_power_charging",
+      "name": "Battery, power, and charging",
+      "definition": "Battery-life, charging, power-on/off, or unexpected shutdown concerns.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bbattery\\b, \\bcharg(?:e|ing|er)\\b, \\bpower\\b, \\bshut ?down\\b, \\bturn(?:ed)? off\\b, \\bwon'?t turn on\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bbattery\\b",
+          8265
+        ],
+        [
+          "\\bcharg(?:e|ing|er)\\b",
+          2782
+        ],
+        [
+          "\\bturn(?:ed)? off\\b",
+          812
+        ],
+        [
+          "\\bpower\\b",
+          565
+        ],
+        [
+          "\\bshut ?down\\b",
+          219
+        ],
+        [
+          "\\bwon'?t turn on\\b",
+          124
+        ]
+      ],
+      "approximate_number_of_primary_examples": 6273,
+      "percentage_of_all_customer_messages": 5.232,
+      "percentage_of_classified_customer_messages": 8.641,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000219",
+          "text": "@AppleSupport any way to check overall battery health of my iPhone 7?"
+        },
+        {
+          "tweet_id": "1001152",
+          "text": "Well ios11 is a swarm of bugs. I literally was stranded in a foreign country because my battery suddenly died. @AppleSupport"
+        },
+        {
+          "tweet_id": "1001150",
+          "text": "@AppleSupport The battery dies in seconds. I’ve contacted my company IT department and they stated it is a known 11.3 issue."
+        },
+        {
+          "tweet_id": "1001171",
+          "text": "@AppleSupport ios 11.0.3 tons of bugs on my iphone 5s, battery drains while charging, no clock or date on lock screen, visual artifacts"
+        },
+        {
+          "tweet_id": "1001221",
+          "text": "@AppleSupport I close my MacBook Pro at night,but I found that it would automatically shut down. What happened?"
+        }
+      ]
+    },
+    {
+      "intent_id": "connectivity_network",
+      "name": "Connectivity and network access",
+      "definition": "Wi-Fi, Bluetooth, cellular, hotspot, signal, or network connection problems.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bwi[ -]?fi\\b, \\bbluetooth\\b, \\bcellular\\b, \\bnetwork\\b, \\bhotspot\\b, \\bsignal\\b, \\b4g\\b, \\blte\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bwi[ -]?fi\\b",
+          2524
+        ],
+        [
+          "\\bbluetooth\\b",
+          1364
+        ],
+        [
+          "\\bnetwork\\b",
+          439
+        ],
+        [
+          "\\bcellular\\b",
+          311
+        ],
+        [
+          "\\blte\\b",
+          144
+        ],
+        [
+          "\\bsignal\\b",
+          133
+        ],
+        [
+          "\\b4g\\b",
+          98
+        ],
+        [
+          "\\bhotspot\\b",
+          84
+        ]
+      ],
+      "approximate_number_of_primary_examples": 2550,
+      "percentage_of_all_customer_messages": 2.127,
+      "percentage_of_classified_customer_messages": 3.512,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1001123",
+          "text": "@AppleSupport where is personal hotspot in iPhone 7? https://t.co/qh3l74Q2Sl"
+        },
+        {
+          "tweet_id": "1001121",
+          "text": "@AppleSupport Hotspot is related to carrier? Thats something new."
+        },
+        {
+          "tweet_id": "1001122",
+          "text": "@AppleSupport My carrier BSNL allows hotspot. Please tell me what should I do now?"
+        },
+        {
+          "tweet_id": "1001134",
+          "text": "@115858 if my screen say poor connection does that mean my wifi is messed up or theres? cause i tired of having this argument erry night 😭💯"
+        },
+        {
+          "tweet_id": "1001180",
+          "text": "@AppleSupport enfia no cu essa atualização maldita que fica ligando o Wi-Fi sozinho"
+        }
+      ]
+    },
+    {
+      "intent_id": "apple_id_icloud_account",
+      "name": "Apple ID, iCloud, and account access",
+      "definition": "Apple ID, iCloud, sign-in, password, verification, or account-access concerns.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bapple id\\b, \\bicloud\\b, \\bsign[ -]?in\\b, \\bpassword\\b, \\baccount\\b, \\bverification\\b, \\btwo[ -]?factor\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bicloud\\b",
+          1600
+        ],
+        [
+          "\\baccount\\b",
+          1036
+        ],
+        [
+          "\\bpassword\\b",
+          809
+        ],
+        [
+          "\\bapple id\\b",
+          638
+        ],
+        [
+          "\\bverification\\b",
+          176
+        ],
+        [
+          "\\bsign[ -]?in\\b",
+          158
+        ],
+        [
+          "\\btwo[ -]?factor\\b",
+          67
+        ]
+      ],
+      "approximate_number_of_primary_examples": 2945,
+      "percentage_of_all_customer_messages": 2.456,
+      "percentage_of_classified_customer_messages": 4.057,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000151",
+          "text": "@AppleSupport @AppleSupport, link not helpful - Issue was getting the Zip, SS# AT&amp;T verification- Is that Apple's Servers or AT&amp;T? #transparency #iphoneX"
+        },
+        {
+          "tweet_id": "1002979",
+          "text": "@AppleSupport hello, I just got an email saying that my apple ID has been disabled. Can you confirm that email? I'm afraid it might be fake."
+        },
+        {
+          "tweet_id": "1003753",
+          "text": "@AppleSupport I’m getting the following error when trying to access my Apple ID - iPhone 6s plus (11.0.3). HELP!! https://t.co/qPPhunkwEs"
+        },
+        {
+          "tweet_id": "1003751",
+          "text": "@AppleSupport No - just this one. Steps taken: App Store / Account / Apple ID. The error occurs on https://t.co/g3FtgcjJhZ."
+        },
+        {
+          "tweet_id": "1005212",
+          "text": "@AppleSupport hi guys Could you please DM me to discuss an issue I'm having with account recovery please? I'm getting really annoyed now 😭"
+        }
+      ]
+    },
+    {
+      "intent_id": "app_store_media_services",
+      "name": "App Store and Apple media services",
+      "definition": "App Store, iTunes, Apple Music, podcasts, downloads, or media-library issues.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bapp store\\b, \\bitunes\\b, \\bapple music\\b, \\bmusic\\b, \\bpodcast\\b, \\bdownload(?:ing|ed)?\\b, \\blibrary\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bmusic\\b",
+          3198
+        ],
+        [
+          "\\bdownload(?:ing|ed)?\\b",
+          2422
+        ],
+        [
+          "\\bitunes\\b",
+          1780
+        ],
+        [
+          "\\bapple music\\b",
+          1116
+        ],
+        [
+          "\\bapp store\\b",
+          640
+        ],
+        [
+          "\\blibrary\\b",
+          499
+        ],
+        [
+          "\\bpodcast\\b",
+          390
+        ]
+      ],
+      "approximate_number_of_primary_examples": 4844,
+      "percentage_of_all_customer_messages": 4.04,
+      "percentage_of_classified_customer_messages": 6.672,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000221",
+          "text": "@AppleSupport Apps weren't a problem, System update was. I was able to download &amp; install the system update via iTunes just after I sent the tweet."
+        },
+        {
+          "tweet_id": "1002272",
+          "text": "@AppleSupport if I restore a previous itunes backup onto a new device, will all my apps be automatically logged in?"
+        },
+        {
+          "tweet_id": "1002785",
+          "text": "@AppleSupport my iPhone has 6GB available but will not allow me to download apps or take any photos. WHAT GIVES https://t.co/pAhLWXleQ9"
+        },
+        {
+          "tweet_id": "1002936",
+          "text": "@AppleSupport my iPhone got stuck while restoring it via itunes could you please help as your web services is down?"
+        },
+        {
+          "tweet_id": "1002957",
+          "text": "#iOS11.0.3 @AppleSupport This update is STILL full of bugs😡Apple music won’t work &amp;I’m paying $$$ For subscription. Please fix ASAP"
+        }
+      ]
+    },
+    {
+      "intent_id": "billing_purchases_subscriptions",
+      "name": "Billing, purchases, and subscriptions",
+      "definition": "Charges, payments, refunds, purchases, subscriptions, or card-related support.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bcharged\\b, \\bcharge(?: me| my| for)\\b, \\bbill(?:ing|ed)?\\b, \\bpayment\\b, \\bpurchase[ds]?\\b, \\brefund\\b, \\bsubscription\\b, \\bcredit card\\b, \\bmoney\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bpurchase[ds]?\\b",
+          969
+        ],
+        [
+          "\\bmoney\\b",
+          522
+        ],
+        [
+          "\\bcharged\\b",
+          472
+        ],
+        [
+          "\\bpayment\\b",
+          251
+        ],
+        [
+          "\\bcharge(?: me| my| for)\\b",
+          246
+        ],
+        [
+          "\\brefund\\b",
+          218
+        ],
+        [
+          "\\bsubscription\\b",
+          210
+        ],
+        [
+          "\\bbill(?:ing|ed)?\\b",
+          165
+        ],
+        [
+          "\\bcredit card\\b",
+          139
+        ]
+      ],
+      "approximate_number_of_primary_examples": 1395,
+      "percentage_of_all_customer_messages": 1.164,
+      "percentage_of_classified_customer_messages": 1.922,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1005006",
+          "text": "@AppleSupport It appears that the other option(whatever that may be)is not available to customers using a 5 month old faulty phone,that only works on low brightness,consequently damaging them eyes!Great to see you looking after your customers Apple👍May have to send you my opticians bill 👓🤔"
+        },
+        {
+          "tweet_id": "1005226",
+          "text": "@AppleSupport I did it before, they are not helping, they say I have to wait until Apple see the bill. It is my 3th day without phone"
+        },
+        {
+          "tweet_id": "1007803",
+          "text": "@AppleSupport Who are these people? How did they access my phone to input their info if my phone isn’t hacked. Not just for my payment info. But, https://t.co/Ommd2RFJs8"
+        },
+        {
+          "tweet_id": "1008526",
+          "text": "@AppleSupport i cancelled it a day before and it still charged me"
+        },
+        {
+          "tweet_id": "101239",
+          "text": "@115858 Just because you're releasing new phones doesn't mean you should stop making my current iPhone stop working. I have a contract and cannot just purchase a new phone every 12 months."
+        }
+      ]
+    },
+    {
+      "intent_id": "messaging_calls_facetime",
+      "name": "Messages, calls, and FaceTime",
+      "definition": "iMessage, SMS/message delivery, calls, or FaceTime problems.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bimessage\\b, \\bface ?time\\b, \\bsms\\b, \\btext(?:ing|s)?\\b, \\b(?:send|sent|receive|received|deliver(?:ed|y)?)\\s+(?:a )?messages?\\b, \\bmessages?\\s+(?:not|won|doesn|aren|isn't|are not|can't)\\b, \\bcalls?\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bcalls?\\b",
+          2449
+        ],
+        [
+          "\\btext(?:ing|s)?\\b",
+          2138
+        ],
+        [
+          "\\bimessage\\b",
+          683
+        ],
+        [
+          "\\bface ?time\\b",
+          366
+        ],
+        [
+          "\\bsms\\b",
+          146
+        ],
+        [
+          "\\b(?:send|sent|receive|received|deliver(?:ed|y)?)\\s+(?:a )?messages?\\b",
+          128
+        ],
+        [
+          "\\bmessages?\\s+(?:not|won|doesn|aren|isn't|are not|can't)\\b",
+          67
+        ]
+      ],
+      "approximate_number_of_primary_examples": 3348,
+      "percentage_of_all_customer_messages": 2.792,
+      "percentage_of_classified_customer_messages": 4.612,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000217",
+          "text": "@AppleSupport my iPhone 7 isn't sending or receiving iMessages and I can't make or receive phone calls. Tried doing a reset multiple times"
+        },
+        {
+          "tweet_id": "1001128",
+          "text": "@AppleSupport my mother received this phishing text message a few days ago. I assume you’re aware of the scam, but the website obviously needs to be stopped. https://t.co/u2pP8gTJ8I"
+        },
+        {
+          "tweet_id": "1002307",
+          "text": "@AppleSupport Yes I've sent a message. Please check @AppleSupport"
+        },
+        {
+          "tweet_id": "1002314",
+          "text": "@AppleSupport this is a screenshot from iMessage. I am missing the space bar. Are you aware of this problem? Should I open a bug report? https://t.co/RfUKpKIELC"
+        },
+        {
+          "tweet_id": "1005223",
+          "text": "Do you know about this; @115858 @AppleSupport ? Obviously it's a scam, and I've received similar emails, but never a text before. https://t.co/qIL5efcjoo"
+        }
+      ]
+    },
+    {
+      "intent_id": "hardware_accessories",
+      "name": "Hardware, display, and accessories",
+      "definition": "Physical device, screen, camera, audio, button, port, cable, or accessory problems.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bscreen\\b, \\bcamera\\b, \\bspeaker\\b, \\bheadphones?\\b, \\bhome button\\b, \\btouch id\\b, \\blightning\\b, \\bcable\\b, \\bport\\b, \\bmicrophone\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bscreen\\b",
+          4441
+        ],
+        [
+          "\\bcamera\\b",
+          894
+        ],
+        [
+          "\\bheadphones?\\b",
+          544
+        ],
+        [
+          "\\bspeaker\\b",
+          389
+        ],
+        [
+          "\\bhome button\\b",
+          306
+        ],
+        [
+          "\\btouch id\\b",
+          213
+        ],
+        [
+          "\\bcable\\b",
+          208
+        ],
+        [
+          "\\blightning\\b",
+          97
+        ],
+        [
+          "\\bport\\b",
+          88
+        ],
+        [
+          "\\bmicrophone\\b",
+          52
+        ]
+      ],
+      "approximate_number_of_primary_examples": 3568,
+      "percentage_of_all_customer_messages": 2.976,
+      "percentage_of_classified_customer_messages": 4.915,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1001130",
+          "text": "@AppleSupport my iPhone 7 Plus doesn’t work properly with 11.0.3 😡😡. The speaker doesn’t work on calls, is non responsive &amp; screen locks!!"
+        },
+        {
+          "tweet_id": "1002023",
+          "text": "@AppleSupport this screen freezing in the horizontal is absolutely unacceptable. Please see the MANY complaints on this."
+        },
+        {
+          "tweet_id": "1002228",
+          "text": "So my iPhone is once again back in Headphone mode for absolutely no fucking reason. Thanks @115858."
+        },
+        {
+          "tweet_id": "1002258",
+          "text": "@AppleSupport When I screen record and edit the video in iMovie, the sound goes missing. The microphone is turned on, and I can hear it when played inside the photo library. But not in imovie. Any fix?"
+        },
+        {
+          "tweet_id": "1002793",
+          "text": "@AppleSupport It’s happened with several apps and it’s happened while in a resting state, where I can feel the haptic button but screen won’t wake up."
+        }
+      ]
+    },
+    {
+      "intent_id": "device_setup_activation_migration",
+      "name": "Device setup, activation, and migration",
+      "definition": "Setting up, activating, restoring, transferring, or replacing an iPhone/iPad/device.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bactivat(?:e|ion|ed)\\b, \\bset ?up\\b, \\brestore\\b, \\btransfer\\b, \\bmigrat(?:e|ion)\\b, \\bnew (?:iphone|ipad|phone)\\b, \\breplacement\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bnew (?:iphone|ipad|phone)\\b",
+          2135
+        ],
+        [
+          "\\brestore\\b",
+          566
+        ],
+        [
+          "\\bactivat(?:e|ion|ed)\\b",
+          464
+        ],
+        [
+          "\\breplacement\\b",
+          392
+        ],
+        [
+          "\\bset ?up\\b",
+          347
+        ],
+        [
+          "\\btransfer\\b",
+          131
+        ],
+        [
+          "\\bmigrat(?:e|ion)\\b",
+          18
+        ]
+      ],
+      "approximate_number_of_primary_examples": 1640,
+      "percentage_of_all_customer_messages": 1.368,
+      "percentage_of_classified_customer_messages": 2.259,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000099",
+          "text": "@AppleSupport my iPhone X keeps getting a \"Could Not Activate iPhone\" error. Is the activation server down?"
+        },
+        {
+          "tweet_id": "1001166",
+          "text": "@115858 this new phone software is making my phone slow and glitchy! Not impressed!"
+        },
+        {
+          "tweet_id": "1003857",
+          "text": "Tried everything apart from restore to fix the #message send failure on #iOS11 but nothing works @AppleSupport any tips?? #bugs #issues https://t.co/H2FWpi5lxY"
+        },
+        {
+          "tweet_id": "1004998",
+          "text": "Apple sucks... brand new iPhone crashes every fucking day @115858"
+        },
+        {
+          "tweet_id": "1005007",
+          "text": "Hi @AppleSupport I hav a faulty phone,only 5 months old!Spoke to your support team who hav tried helping but I hav a hardware issue, so a replacement is my only option!I dont live near a store,sending away is not a option,I need to b contactable!What other options do apple have?"
+        }
+      ]
+    },
+    {
+      "intent_id": "mac_computer",
+      "name": "Mac computer support",
+      "definition": "Mac, MacBook, iMac, or desktop/laptop concerns not primarily described as an OS update.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bmacbook\\b, \\bimac\\b, \\bmac\\b, \\bmac mini\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bmacbook\\b",
+          1552
+        ],
+        [
+          "\\bmac\\b",
+          1186
+        ],
+        [
+          "\\bimac\\b",
+          325
+        ],
+        [
+          "\\bmac mini\\b",
+          34
+        ]
+      ],
+      "approximate_number_of_primary_examples": 1344,
+      "percentage_of_all_customer_messages": 1.121,
+      "percentage_of_classified_customer_messages": 1.851,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000208",
+          "text": "Seriously @115858 I LITERALLY have trouble doing anything on my 12 month old MacBook Air, transferring files, that'll be two crashes...."
+        },
+        {
+          "tweet_id": "100243",
+          "text": "@AppleSupport I have tried restarting my macbook but it keeps lagging. I will try rebooting and close all apps once again."
+        },
+        {
+          "tweet_id": "1004993",
+          "text": "30+ minutes on the phone with @115858 Support &amp; they ain’t do shiiiiittt to fix my Mac 😤"
+        },
+        {
+          "tweet_id": "1010562",
+          "text": "Does anyone have a workable way of getting photos from an iPhone6 to an iMac that actually works or have @115858 really turned to shit?"
+        },
+        {
+          "tweet_id": "101251",
+          "text": "@AppleSupport why is my MacBook doing this https://t.co/wpJegaDLPw"
+        }
+      ]
+    },
+    {
+      "intent_id": "apple_watch",
+      "name": "Apple Watch support",
+      "definition": "Apple Watch or watchOS concerns.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bapple watch\\b, \\bwatchos\\b, \\bmy watch\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bapple watch\\b",
+          737
+        ],
+        [
+          "\\bmy watch\\b",
+          260
+        ],
+        [
+          "\\bwatchos\\b",
+          146
+        ]
+      ],
+      "approximate_number_of_primary_examples": 579,
+      "percentage_of_all_customer_messages": 0.483,
+      "percentage_of_classified_customer_messages": 0.798,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1003735",
+          "text": "@115858 @AppleSupport do you offer a military discount on Apple Watch 3 Series?"
+        },
+        {
+          "tweet_id": "1004995",
+          "text": "I’m scared to wear my Apple Watch because yesterday it spontaneously called 911 four times and I had to repeatedly explain to the police that I was not in need of their assistance @115858"
+        },
+        {
+          "tweet_id": "1005016",
+          "text": "@AppleSupport my Apple Watch keeps going into airplane mode. What’s up with that?"
+        },
+        {
+          "tweet_id": "1005245",
+          "text": "@AppleSupport Hey Apple. When Will Apple-Sim for the Apple watch series 3 be supported in the Netherlands? When will Vodafone support it????"
+        },
+        {
+          "tweet_id": "1009308",
+          "text": "@AppleSupport is there a way to disable this feature on the Apple Watch? Prefer to see my watch face. https://t.co/bLt9tMmRJJ"
+        }
+      ]
+    },
+    {
+      "intent_id": "performance_stability",
+      "name": "Performance, stability, and unexpected behavior",
+      "definition": "Slow, frozen, crashing, stuck, glitching, or otherwise non-working behavior without a more specific primary issue.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bslow\\b, \\bfreez(?:e|ing|es|en)\\b, \\bcrash(?:es|ed|ing)?\\b, \\blag(?:gy)?\\b, \\bglitch\\b, \\bstuck\\b, \\bnot working\\b, \\bdoesn'?t work\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bfreez(?:e|ing|es|en)\\b",
+          3786
+        ],
+        [
+          "\\bcrash(?:es|ed|ing)?\\b",
+          2532
+        ],
+        [
+          "\\bslow\\b",
+          2108
+        ],
+        [
+          "\\bglitch\\b",
+          2040
+        ],
+        [
+          "\\bnot working\\b",
+          1174
+        ],
+        [
+          "\\bstuck\\b",
+          785
+        ],
+        [
+          "\\blag(?:gy)?\\b",
+          576
+        ],
+        [
+          "\\bdoesn'?t work\\b",
+          339
+        ]
+      ],
+      "approximate_number_of_primary_examples": 4734,
+      "percentage_of_all_customer_messages": 3.948,
+      "percentage_of_classified_customer_messages": 6.521,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000235",
+          "text": "@AppleSupport updated my phone the other day and it keeps freezing so I have to restart it. Then it’s really slow. Sort it out."
+        },
+        {
+          "tweet_id": "1001174",
+          "text": "@188 app is constantly crashing on #iOS11 @AppleSupport @115858 Haptic feedback is still not working even in 11.0.3 on my 7Plus #apple"
+        },
+        {
+          "tweet_id": "100242",
+          "text": "@AppleSupport for now I just restarted, it doesn't lag yet. I will let you know when it happen again."
+        },
+        {
+          "tweet_id": "1002794",
+          "text": "@115858 @AppleSupport iPhone 7+ iOS11 is 💩. Randomly freezing or in some cases rebooting. Please fix. #ios11update #dontupdate"
+        },
+        {
+          "tweet_id": "1002950",
+          "text": "@AppleSupport It’s constantly freezing! All apps. It happened just now with @118189 and the #Twitter app closed before it opened. Why?? #apple #ipone"
+        }
+      ]
+    },
+    {
+      "intent_id": "keyboard_text_rendering",
+      "name": "Keyboard, characters, and text rendering",
+      "definition": "Question-mark boxes, missing letters, keyboard, emoji, or character-rendering problems.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bquestions? marks?\\b, \\bsquares?\\b, \\bkeyboard\\b, \\bletters?\\b, \\bcharacters?\\b, \\bemojis?\\b, \\btext rendering\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bletters?\\b",
+          2860
+        ],
+        [
+          "\\bquestions? marks?\\b",
+          2246
+        ],
+        [
+          "\\bkeyboard\\b",
+          1631
+        ],
+        [
+          "\\bemojis?\\b",
+          642
+        ],
+        [
+          "\\bcharacters?\\b",
+          276
+        ],
+        [
+          "\\bsquares?\\b",
+          169
+        ]
+      ],
+      "approximate_number_of_primary_examples": 4458,
+      "percentage_of_all_customer_messages": 3.718,
+      "percentage_of_classified_customer_messages": 6.141,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000018",
+          "text": "CANT STAND THOSE DAMN SQUARES, @115858 . Y’all need to fix that shit."
+        },
+        {
+          "tweet_id": "1000024",
+          "text": "I’m so tired of these question mark boxes on my TL. Get your shit together @115858 @AppleSupport"
+        },
+        {
+          "tweet_id": "1000074",
+          "text": "FUCK YOU @115858 &amp; @123765! NOW I️ CAN’T TWEET THE LETTER I️?!"
+        },
+        {
+          "tweet_id": "1000080",
+          "text": "Why is shit popping up as questions marks on my phone?? What’s going on @AppleSupport"
+        },
+        {
+          "tweet_id": "1000109",
+          "text": "Dear @115858, WTF is going on with my keyboard and this “I️” bull-ish 😡"
+        }
+      ]
+    },
+    {
+      "intent_id": "support_contact_experience",
+      "name": "Support contact and service experience",
+      "definition": "Waiting, disconnection, direct-message, or customer-service contact problems rather than a specific product issue.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bcustomer service\\b, \\bon hold\\b, \\bdisconnected\\b, \\bprivate messages?\\b, \\bcheck dm\\b, \\bwaiting\\b, \\bsupport (?:is|was|has)\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\bwaiting\\b",
+          493
+        ],
+        [
+          "\\bcustomer service\\b",
+          302
+        ],
+        [
+          "\\bon hold\\b",
+          112
+        ],
+        [
+          "\\bdisconnected\\b",
+          84
+        ],
+        [
+          "\\bsupport (?:is|was|has)\\b",
+          63
+        ],
+        [
+          "\\bcheck dm\\b",
+          40
+        ],
+        [
+          "\\bprivate messages?\\b",
+          24
+        ]
+      ],
+      "approximate_number_of_primary_examples": 628,
+      "percentage_of_all_customer_messages": 0.524,
+      "percentage_of_classified_customer_messages": 0.865,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1000092",
+          "text": "@AppleSupport your c/s sucks, I was just disconnected after waiting on hold for 45+ minutes"
+        },
+        {
+          "tweet_id": "1001125",
+          "text": "@AppleSupport Pls check DM"
+        },
+        {
+          "tweet_id": "1002970",
+          "text": "Been waiting for the #iPhoneX but my phone been restarting in the middle of conversation @115858 #WhatsTheDeal #FixThis"
+        },
+        {
+          "tweet_id": "1007115",
+          "text": "@AppleSupport what to do ? Im still waiting."
+        },
+        {
+          "tweet_id": "1013011",
+          "text": "@AppleSupport I'm waiting."
+        }
+      ]
+    },
+    {
+      "intent_id": "store_orders_repairs",
+      "name": "Store, order, delivery, and repair service",
+      "definition": "Apple Store, repair, Genius Bar, order, delivery, shipping, or appointment concerns.",
+      "inclusion_criteria": "Customer message contains one or more observed corpus evidence patterns: \\bapple store\\b, \\brepair\\b, \\bgenius bar\\b, \\border\\b, \\bdeliver(?:y|ed)?\\b, \\bship(?:ping|ped)?\\b, \\bappointment\\b",
+      "exclusion_criteria": "No listed evidence pattern is present; messages matching several patterns retain all matches and are counted under the strongest-evidence primary label for aggregate totals.",
+      "observed_evidence_patterns": [
+        [
+          "\\border\\b",
+          703
+        ],
+        [
+          "\\bapple store\\b",
+          598
+        ],
+        [
+          "\\brepair\\b",
+          254
+        ],
+        [
+          "\\bdeliver(?:y|ed)?\\b",
+          230
+        ],
+        [
+          "\\bship(?:ping|ped)?\\b",
+          196
+        ],
+        [
+          "\\bappointment\\b",
+          188
+        ],
+        [
+          "\\bgenius bar\\b",
+          185
+        ]
+      ],
+      "approximate_number_of_primary_examples": 1122,
+      "percentage_of_all_customer_messages": 0.936,
+      "percentage_of_classified_customer_messages": 1.545,
+      "representative_real_customer_examples": [
+        {
+          "tweet_id": "1002265",
+          "text": "@AppleSupport thanks ios11 for making my iPhone 7 a brick. Now I have to pay $319 to repair a problem Apple created. #bootloop #ios11"
+        },
+        {
+          "tweet_id": "1011806",
+          "text": "@AppleSupport Apple store!"
+        },
+        {
+          "tweet_id": "101282",
+          "text": "Hey @AppleSupport could you make it more impossible and frustrating to get a Genius Bar Reservation for an elderly person? Ridiculous."
+        },
+        {
+          "tweet_id": "1022926",
+          "text": "@AppleSupport How long will you hold on to an order for me to collect?"
+        },
+        {
+          "tweet_id": "1022925",
+          "text": "@AppleSupport I want to order a case and it says collect Monday but I work be able to till Tuesday. Is this ok?"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "total_customer_messages": 119895,
+    "classified_messages": 72598,
+    "taxonomy_coverage": 0.6055131573460111,
+    "unclassified_messages": 47297,
+    "unclassified_percentage": 0.3944868426539889,
+    "multi_intent_messages": 28505,
+    "multi_intent_percentage": 0.23774969765211226,
+    "too_short_messages": 9306,
+    "too_short_percentage": 0.07761791567621669,
+    "non_support_like_messages": 619,
+    "non_support_like_percentage": 0.005162850827807665,
+    "low_information_or_non_support_messages": 873,
+    "low_information_or_non_support_percentage": 0.007281371199799825,
+    "multi_intent_examples": [
+      {
+        "tweet_id": "1000115",
+        "text": "@AppleSupport I’m continually getting the “Could Not Activate iPhone” message … any updates on when this will be working?",
+        "matched_intent_ids": [
+          "software_update_os",
+          "device_setup_activation_migration"
+        ]
+      },
+      {
+        "tweet_id": "1000208",
+        "text": "Seriously @115858 I LITERALLY have trouble doing anything on my 12 month old MacBook Air, transferring files, that'll be two crashes....",
+        "matched_intent_ids": [
+          "mac_computer",
+          "performance_stability"
+        ]
+      },
+      {
+        "tweet_id": "1000223",
+        "text": "Wth @115858, I've been clicking \"download &amp; install\" for almost a week now but the update doesn't want to start download. 🤔",
+        "matched_intent_ids": [
+          "software_update_os",
+          "app_store_media_services"
+        ]
+      },
+      {
+        "tweet_id": "1000221",
+        "text": "@AppleSupport Apps weren't a problem, System update was. I was able to download &amp; install the system update via iTunes just after I sent the tweet.",
+        "matched_intent_ids": [
+          "software_update_os",
+          "app_store_media_services"
+        ]
+      },
+      {
+        "tweet_id": "1000229",
+        "text": "@AppleSupport Please. Let the people in charge of the updates to fix the battery issue. Last two iOS updates worsen the battery life.",
+        "matched_intent_ids": [
+          "software_update_os",
+          "battery_power_charging"
+        ]
+      },
+      {
+        "tweet_id": "1000235",
+        "text": "@AppleSupport updated my phone the other day and it keeps freezing so I have to restart it. Then it’s really slow. Sort it out.",
+        "matched_intent_ids": [
+          "software_update_os",
+          "performance_stability"
+        ]
+      },
+      {
+        "tweet_id": "1001114",
+        "text": "@AppleSupport after updating to iOS 11.0.3, my iPhone 7 will randomly freeze on any app/screen. The buttons won’t even work",
+        "matched_intent_ids": [
+          "software_update_os",
+          "hardware_accessories",
+          "performance_stability"
+        ]
+      },
+      {
+        "tweet_id": "1001119",
+        "text": "The new iPhone update is a giant dumpster fire that will ruin your phone. It updated while I was sleeping, I didn’t ask for this 😤 @115858",
+        "matched_intent_ids": [
+          "software_update_os",
+          "device_setup_activation_migration"
+        ]
+      },
+      {
+        "tweet_id": "1001130",
+        "text": "@AppleSupport my iPhone 7 Plus doesn’t work properly with 11.0.3 😡😡. The speaker doesn’t work on calls, is non responsive &amp; screen locks!!",
+        "matched_intent_ids": [
+          "messaging_calls_facetime",
+          "hardware_accessories"
+        ]
+      },
+      {
+        "tweet_id": "1001132",
+        "text": "@AppleSupport IOS update is a total disaster / phone freezing constantly .... battery draining faster than before.",
+        "matched_intent_ids": [
+          "software_update_os",
+          "battery_power_charging",
+          "performance_stability"
+        ]
+      }
+    ],
+    "unclassified_examples": [
+      {
+        "tweet_id": "1000012",
+        "text": "@AppleSupport explain yourself. https://t.co/356zUHKRCF"
+      },
+      {
+        "tweet_id": "1000078",
+        "text": "@AppleSupport any outlook to fixing this issue? https://t.co/Ku6LgeX67D"
+      },
+      {
+        "tweet_id": "1000098",
+        "text": "@AppleSupport That was hectic, but I’m all set. Thanks guys!"
+      },
+      {
+        "tweet_id": "1000103",
+        "text": "@AppleSupport have u no shame?????????? YALL SUCK"
+      },
+      {
+        "tweet_id": "1000152",
+        "text": "I have the same question Kristi for AT&amp;T. It sounds like it might be an Apple issue. @117735 @AppleSupport https://t.co/UHM3RWZvFK"
+      },
+      {
+        "tweet_id": "1000186",
+        "text": "@115858 @AppleSupport y’all need to fix this fr I️ shouldn’t be having this petty ass problem"
+      },
+      {
+        "tweet_id": "1000204",
+        "text": "@AppleSupport This thing happens frequently https://t.co/prS4nOiHSh"
+      },
+      {
+        "tweet_id": "1000210",
+        "text": "@AppleSupport are y’all going to fix the “I.T” thing?"
+      },
+      {
+        "tweet_id": "1000213",
+        "text": "@AppleSupport Can you help with this?"
+      },
+      {
+        "tweet_id": "1000212",
+        "text": "@AppleSupport 11.0.3"
+      }
+    ],
+    "too_short_examples": [
+      {
+        "tweet_id": "1000012",
+        "text": "@AppleSupport explain yourself. https://t.co/356zUHKRCF"
+      },
+      {
+        "tweet_id": "1000212",
+        "text": "@AppleSupport 11.0.3"
+      },
+      {
+        "tweet_id": "1000232",
+        "text": "@AppleSupport 11.0.3"
+      },
+      {
+        "tweet_id": "1001125",
+        "text": "@AppleSupport Pls check DM"
+      },
+      {
+        "tweet_id": "1001156",
+        "text": "@AppleSupport Any Reply?"
+      },
+      {
+        "tweet_id": "1001154",
+        "text": "@AppleSupport Thanks"
+      },
+      {
+        "tweet_id": "1001158",
+        "text": "@AppleSupport Yes"
+      },
+      {
+        "tweet_id": "1001224",
+        "text": "@AppleSupport iOS 11.0.3"
+      },
+      {
+        "tweet_id": "1002022",
+        "text": "@AppleSupport iPhone 7+"
+      },
+      {
+        "tweet_id": "1002028",
+        "text": "@AppleSupport iOS 11.0.3"
+      }
+    ],
+    "non_support_like_examples": [
+      {
+        "tweet_id": "1001154",
+        "text": "@AppleSupport Thanks"
+      },
+      {
+        "tweet_id": "1010805",
+        "text": "@AppleSupport Thanks"
+      },
+      {
+        "tweet_id": "1015670",
+        "text": "@AppleSupport Thank you !!!!!!!!!!!!"
+      },
+      {
+        "tweet_id": "1024294",
+        "text": "@AppleSupport Thank you!!!!!"
+      },
+      {
+        "tweet_id": "105332",
+        "text": "@AppleSupport Thank you!"
+      },
+      {
+        "tweet_id": "105351",
+        "text": "@AppleSupport Thanks 😊"
+      },
+      {
+        "tweet_id": "1053711",
+        "text": "@AppleSupport Thank you!"
+      },
+      {
+        "tweet_id": "1080445",
+        "text": "@AppleSupport Thanks"
+      },
+      {
+        "tweet_id": "1080452",
+        "text": "@AppleSupport Thank you"
+      },
+      {
+        "tweet_id": "1082415",
+        "text": "@AppleSupport Thanks!"
+      }
+    ]
+  },
+  "readiness_assessment": {
+    "rag_retrieval": "Sufficient volume for later retrieval experiments; use the prepared conversations and preserve direct-link limitations.",
+    "automated_response_generation": "Sufficient historical customer-to-brand volume, but later work must separate safe answerable cases from cases requiring escalation.",
+    "escalation_decisions": "Potentially sufficient for discovery, but no escalation labels have been created in this phase.",
+    "golden_evaluation_set_150_250": "Sufficient source volume; a stratified, human-labelled set must still be created separately and is not produced here."
+  }
+}

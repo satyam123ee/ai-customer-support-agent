@@ -1,0 +1,2662 @@
+{
+  "dataset": {
+    "source_csv": "C:\\Users\\DELL\\Desktop\\hiver side project\\data\\twcs.csv",
+    "file_size_bytes": 516508641,
+    "row_count": 2811774,
+    "columns": [
+      "tweet_id",
+      "author_id",
+      "inbound",
+      "created_at",
+      "text",
+      "response_tweet_id",
+      "in_response_to_tweet_id"
+    ],
+    "inbound_tweets": 1537843,
+    "outbound_tweets": 1273931,
+    "unique_outbound_brands": 108,
+    "invalid_inbound_values": 0,
+    "date_range_utc": [
+      "2008-05-08T20:13:59+00:00",
+      "2017-12-03T23:14:01+00:00"
+    ],
+    "candidate_limit": 40,
+    "method_note": "Candidates are the top outbound authors; response links use raw tweet-id references. Thread metrics are connected components around candidate-brand tweets."
+  },
+  "selection_method": {
+    "score_weights": {
+      "customer_issue_volume": 25,
+      "usable_brand_responses": 25,
+      "link_coverage": 20,
+      "conversation_components": 15,
+      "lexical_support_diversity": 15
+    },
+    "golden_set_eligibility": "At least 250 answered customer issues and 250 linked brand responses."
+  },
+  "selected_brand": {
+    "brand": "AppleSupport",
+    "outbound_tweets": 106860,
+    "customer_issues_answered": 106623,
+    "outbound_to_inbound_link_rate": 0.9977821448624369,
+    "response_links": 106719,
+    "usable_historical_brand_responses": 106623,
+    "linked_customer_replies": 36658,
+    "reconstructed_components": 83449,
+    "average_component_size": 2.718,
+    "topical_tokens_with_frequency_at_least_3": 9975,
+    "top_issue_terms": [
+      [
+        "phone",
+        22008
+      ],
+      [
+        "iphone",
+        21950
+      ],
+      [
+        "ios",
+        21334
+      ],
+      [
+        "update",
+        16070
+      ],
+      [
+        "fix",
+        14516
+      ],
+      [
+        "why",
+        9883
+      ],
+      [
+        "apple",
+        9227
+      ],
+      [
+        "new",
+        9047
+      ],
+      [
+        "battery",
+        8528
+      ],
+      [
+        "what",
+        8364
+      ],
+      [
+        "now",
+        8164
+      ],
+      [
+        "since",
+        5970
+      ]
+    ],
+    "score": 98.3,
+    "golden_set_eligible": true
+  },
+  "ranked_candidates": [
+    {
+      "brand": "AppleSupport",
+      "outbound_tweets": 106860,
+      "customer_issues_answered": 106623,
+      "outbound_to_inbound_link_rate": 0.9977821448624369,
+      "response_links": 106719,
+      "usable_historical_brand_responses": 106623,
+      "linked_customer_replies": 36658,
+      "reconstructed_components": 83449,
+      "average_component_size": 2.718,
+      "topical_tokens_with_frequency_at_least_3": 9975,
+      "top_issue_terms": [
+        [
+          "phone",
+          22008
+        ],
+        [
+          "iphone",
+          21950
+        ],
+        [
+          "ios",
+          21334
+        ],
+        [
+          "update",
+          16070
+        ],
+        [
+          "fix",
+          14516
+        ],
+        [
+          "why",
+          9883
+        ],
+        [
+          "apple",
+          9227
+        ],
+        [
+          "new",
+          9047
+        ],
+        [
+          "battery",
+          8528
+        ],
+        [
+          "what",
+          8364
+        ],
+        [
+          "now",
+          8164
+        ],
+        [
+          "since",
+          5970
+        ]
+      ],
+      "score": 98.3,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AmazonHelp",
+      "outbound_tweets": 169840,
+      "customer_issues_answered": 154976,
+      "outbound_to_inbound_link_rate": 0.9124823363165332,
+      "response_links": 169287,
+      "usable_historical_brand_responses": 154976,
+      "linked_customer_replies": 100503,
+      "reconstructed_components": 89642,
+      "average_component_size": 4.01,
+      "topical_tokens_with_frequency_at_least_3": 21043,
+      "top_issue_terms": [
+        [
+          "amazon",
+          29400
+        ],
+        [
+          "order",
+          17011
+        ],
+        [
+          "delivery",
+          16613
+        ],
+        [
+          "prime",
+          13436
+        ],
+        [
+          "now",
+          10608
+        ],
+        [
+          "service",
+          9312
+        ],
+        [
+          "delivered",
+          9213
+        ],
+        [
+          "que",
+          8950
+        ],
+        [
+          "what",
+          8720
+        ],
+        [
+          "day",
+          8570
+        ],
+        [
+          "customer",
+          8496
+        ],
+        [
+          "why",
+          7936
+        ]
+      ],
+      "score": 98.25,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Uber_Support",
+      "outbound_tweets": 56270,
+      "customer_issues_answered": 55182,
+      "outbound_to_inbound_link_rate": 0.9806646525679759,
+      "response_links": 56261,
+      "usable_historical_brand_responses": 55182,
+      "linked_customer_replies": 22160,
+      "reconstructed_components": 43841,
+      "average_component_size": 2.789,
+      "topical_tokens_with_frequency_at_least_3": 7621,
+      "top_issue_terms": [
+        [
+          "uber",
+          11978
+        ],
+        [
+          "driver",
+          11577
+        ],
+        [
+          "ride",
+          5477
+        ],
+        [
+          "app",
+          5115
+        ],
+        [
+          "account",
+          4731
+        ],
+        [
+          "how",
+          4590
+        ],
+        [
+          "charged",
+          4362
+        ],
+        [
+          "why",
+          4282
+        ],
+        [
+          "drivers",
+          3798
+        ],
+        [
+          "email",
+          3664
+        ],
+        [
+          "what",
+          3573
+        ],
+        [
+          "now",
+          3471
+        ]
+      ],
+      "score": 94.35,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "SpotifyCares",
+      "outbound_tweets": 43265,
+      "customer_issues_answered": 41585,
+      "outbound_to_inbound_link_rate": 0.9611695365769097,
+      "response_links": 43243,
+      "usable_historical_brand_responses": 41585,
+      "linked_customer_replies": 15096,
+      "reconstructed_components": 30143,
+      "average_component_size": 2.935,
+      "topical_tokens_with_frequency_at_least_3": 6399,
+      "top_issue_terms": [
+        [
+          "spotify",
+          8266
+        ],
+        [
+          "account",
+          5272
+        ],
+        [
+          "premium",
+          4478
+        ],
+        [
+          "why",
+          4014
+        ],
+        [
+          "app",
+          3778
+        ],
+        [
+          "songs",
+          2883
+        ],
+        [
+          "music",
+          2852
+        ],
+        [
+          "how",
+          2755
+        ],
+        [
+          "there",
+          2247
+        ],
+        [
+          "i'm",
+          2247
+        ],
+        [
+          "now",
+          2196
+        ],
+        [
+          "still",
+          2163
+        ]
+      ],
+      "score": 92.29,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AmericanAir",
+      "outbound_tweets": 36764,
+      "customer_issues_answered": 36457,
+      "outbound_to_inbound_link_rate": 0.9916494396692417,
+      "response_links": 36598,
+      "usable_historical_brand_responses": 36457,
+      "linked_customer_replies": 18045,
+      "reconstructed_components": 27502,
+      "average_component_size": 2.987,
+      "topical_tokens_with_frequency_at_least_3": 7491,
+      "top_issue_terms": [
+        [
+          "flight",
+          10758
+        ],
+        [
+          "service",
+          2643
+        ],
+        [
+          "now",
+          2568
+        ],
+        [
+          "time",
+          2401
+        ],
+        [
+          "gate",
+          2228
+        ],
+        [
+          "plane",
+          2163
+        ],
+        [
+          "what",
+          2153
+        ],
+        [
+          "customer",
+          2020
+        ],
+        [
+          "amp",
+          1994
+        ],
+        [
+          "how",
+          1862
+        ],
+        [
+          "why",
+          1828
+        ],
+        [
+          "flights",
+          1709
+        ]
+      ],
+      "score": 92.22,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "TMobileHelp",
+      "outbound_tweets": 34317,
+      "customer_issues_answered": 33837,
+      "outbound_to_inbound_link_rate": 0.98601276335344,
+      "response_links": 34287,
+      "usable_historical_brand_responses": 33837,
+      "linked_customer_replies": 11662,
+      "reconstructed_components": 27208,
+      "average_component_size": 2.689,
+      "topical_tokens_with_frequency_at_least_3": 5725,
+      "top_issue_terms": [
+        [
+          "service",
+          4705
+        ],
+        [
+          "phone",
+          4392
+        ],
+        [
+          "mobile",
+          3459
+        ],
+        [
+          "iphone",
+          2851
+        ],
+        [
+          "customer",
+          2833
+        ],
+        [
+          "what",
+          2409
+        ],
+        [
+          "now",
+          2197
+        ],
+        [
+          "how",
+          2169
+        ],
+        [
+          "why",
+          1962
+        ],
+        [
+          "i'm",
+          1931
+        ],
+        [
+          "one",
+          1918
+        ],
+        [
+          "new",
+          1843
+        ]
+      ],
+      "score": 91.79,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "SouthwestAir",
+      "outbound_tweets": 28977,
+      "customer_issues_answered": 28285,
+      "outbound_to_inbound_link_rate": 0.9761189909238361,
+      "response_links": 28889,
+      "usable_historical_brand_responses": 28285,
+      "linked_customer_replies": 11192,
+      "reconstructed_components": 22133,
+      "average_component_size": 2.811,
+      "topical_tokens_with_frequency_at_least_3": 5988,
+      "top_issue_terms": [
+        [
+          "flight",
+          8405
+        ],
+        [
+          "time",
+          1751
+        ],
+        [
+          "flights",
+          1492
+        ],
+        [
+          "now",
+          1480
+        ],
+        [
+          "amp",
+          1397
+        ],
+        [
+          "how",
+          1385
+        ],
+        [
+          "fly",
+          1374
+        ],
+        [
+          "flying",
+          1334
+        ],
+        [
+          "plane",
+          1305
+        ],
+        [
+          "what",
+          1300
+        ],
+        [
+          "service",
+          1285
+        ],
+        [
+          "love",
+          1280
+        ]
+      ],
+      "score": 90.57,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "comcastcares",
+      "outbound_tweets": 33031,
+      "customer_issues_answered": 30369,
+      "outbound_to_inbound_link_rate": 0.919409039992734,
+      "response_links": 33007,
+      "usable_historical_brand_responses": 30369,
+      "linked_customer_replies": 8906,
+      "reconstructed_components": 25325,
+      "average_component_size": 2.655,
+      "topical_tokens_with_frequency_at_least_3": 5606,
+      "top_issue_terms": [
+        [
+          "internet",
+          6035
+        ],
+        [
+          "service",
+          4868
+        ],
+        [
+          "mobile",
+          3455
+        ],
+        [
+          "comcast",
+          3237
+        ],
+        [
+          "why",
+          2807
+        ],
+        [
+          "care",
+          2471
+        ],
+        [
+          "what",
+          2237
+        ],
+        [
+          "now",
+          2082
+        ],
+        [
+          "cable",
+          1856
+        ],
+        [
+          "down",
+          1774
+        ],
+        [
+          "time",
+          1671
+        ],
+        [
+          "how",
+          1613
+        ]
+      ],
+      "score": 89.91,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Ask_Spectrum",
+      "outbound_tweets": 25860,
+      "customer_issues_answered": 24976,
+      "outbound_to_inbound_link_rate": 0.965815931941222,
+      "response_links": 25807,
+      "usable_historical_brand_responses": 24976,
+      "linked_customer_replies": 9536,
+      "reconstructed_components": 19469,
+      "average_component_size": 2.815,
+      "topical_tokens_with_frequency_at_least_3": 4699,
+      "top_issue_terms": [
+        [
+          "internet",
+          6547
+        ],
+        [
+          "service",
+          4004
+        ],
+        [
+          "why",
+          2496
+        ],
+        [
+          "spectrum",
+          2260
+        ],
+        [
+          "down",
+          2066
+        ],
+        [
+          "outage",
+          1951
+        ],
+        [
+          "what",
+          1939
+        ],
+        [
+          "now",
+          1822
+        ],
+        [
+          "cable",
+          1814
+        ],
+        [
+          "time",
+          1724
+        ],
+        [
+          "there",
+          1607
+        ],
+        [
+          "going",
+          1273
+        ]
+      ],
+      "score": 89.67,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Delta",
+      "outbound_tweets": 42253,
+      "customer_issues_answered": 36134,
+      "outbound_to_inbound_link_rate": 0.8551818805765271,
+      "response_links": 42197,
+      "usable_historical_brand_responses": 36134,
+      "linked_customer_replies": 14470,
+      "reconstructed_components": 27165,
+      "average_component_size": 3.086,
+      "topical_tokens_with_frequency_at_least_3": 6876,
+      "top_issue_terms": [
+        [
+          "flight",
+          10456
+        ],
+        [
+          "delta",
+          3237
+        ],
+        [
+          "time",
+          2330
+        ],
+        [
+          "service",
+          2318
+        ],
+        [
+          "now",
+          2259
+        ],
+        [
+          "what",
+          1947
+        ],
+        [
+          "how",
+          1852
+        ],
+        [
+          "seat",
+          1841
+        ],
+        [
+          "gate",
+          1832
+        ],
+        [
+          "why",
+          1687
+        ],
+        [
+          "amp",
+          1649
+        ],
+        [
+          "there",
+          1644
+        ]
+      ],
+      "score": 89.44,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "VirginTrains",
+      "outbound_tweets": 27817,
+      "customer_issues_answered": 26272,
+      "outbound_to_inbound_link_rate": 0.9444584247043175,
+      "response_links": 27522,
+      "usable_historical_brand_responses": 26272,
+      "linked_customer_replies": 18450,
+      "reconstructed_components": 15761,
+      "average_component_size": 3.917,
+      "topical_tokens_with_frequency_at_least_3": 5262,
+      "top_issue_terms": [
+        [
+          "train",
+          6066
+        ],
+        [
+          "euston",
+          3891
+        ],
+        [
+          "london",
+          2678
+        ],
+        [
+          "service",
+          2317
+        ],
+        [
+          "ticket",
+          2174
+        ],
+        [
+          "what",
+          1940
+        ],
+        [
+          "trains",
+          1693
+        ],
+        [
+          "now",
+          1629
+        ],
+        [
+          "there",
+          1627
+        ],
+        [
+          "any",
+          1570
+        ],
+        [
+          "how",
+          1570
+        ],
+        [
+          "class",
+          1430
+        ]
+      ],
+      "score": 89.18,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "hulu_support",
+      "outbound_tweets": 21872,
+      "customer_issues_answered": 21468,
+      "outbound_to_inbound_link_rate": 0.981528895391368,
+      "response_links": 21783,
+      "usable_historical_brand_responses": 21468,
+      "linked_customer_replies": 9142,
+      "reconstructed_components": 15514,
+      "average_component_size": 2.993,
+      "topical_tokens_with_frequency_at_least_3": 4186,
+      "top_issue_terms": [
+        [
+          "hulu",
+          4358
+        ],
+        [
+          "live",
+          3129
+        ],
+        [
+          "watch",
+          2594
+        ],
+        [
+          "why",
+          2573
+        ],
+        [
+          "app",
+          2181
+        ],
+        [
+          "what",
+          1496
+        ],
+        [
+          "now",
+          1436
+        ],
+        [
+          "new",
+          1429
+        ],
+        [
+          "show",
+          1235
+        ],
+        [
+          "season",
+          1207
+        ],
+        [
+          "shows",
+          1179
+        ],
+        [
+          "there",
+          1167
+        ]
+      ],
+      "score": 89.05,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "ChipotleTweets",
+      "outbound_tweets": 18749,
+      "customer_issues_answered": 18565,
+      "outbound_to_inbound_link_rate": 0.9901861432609739,
+      "response_links": 18612,
+      "usable_historical_brand_responses": 18565,
+      "linked_customer_replies": 7389,
+      "reconstructed_components": 14648,
+      "average_component_size": 2.775,
+      "topical_tokens_with_frequency_at_least_3": 4072,
+      "top_issue_terms": [
+        [
+          "chipotle",
+          3034
+        ],
+        [
+          "queso",
+          1565
+        ],
+        [
+          "burrito",
+          1484
+        ],
+        [
+          "bowl",
+          1325
+        ],
+        [
+          "order",
+          1068
+        ],
+        [
+          "time",
+          1038
+        ],
+        [
+          "like",
+          1020
+        ],
+        [
+          "why",
+          1000
+        ],
+        [
+          "had",
+          979
+        ],
+        [
+          "food",
+          916
+        ],
+        [
+          "what",
+          875
+        ],
+        [
+          "love",
+          836
+        ]
+      ],
+      "score": 88.54,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "UPSHelp",
+      "outbound_tweets": 17817,
+      "customer_issues_answered": 17601,
+      "outbound_to_inbound_link_rate": 0.9878767469270922,
+      "response_links": 17772,
+      "usable_historical_brand_responses": 17601,
+      "linked_customer_replies": 5840,
+      "reconstructed_components": 16103,
+      "average_component_size": 2.466,
+      "topical_tokens_with_frequency_at_least_3": 4566,
+      "top_issue_terms": [
+        [
+          "package",
+          6170
+        ],
+        [
+          "delivery",
+          3300
+        ],
+        [
+          "ups",
+          3182
+        ],
+        [
+          "delivered",
+          2137
+        ],
+        [
+          "day",
+          1825
+        ],
+        [
+          "today",
+          1701
+        ],
+        [
+          "now",
+          1544
+        ],
+        [
+          "what",
+          1485
+        ],
+        [
+          "service",
+          1421
+        ],
+        [
+          "time",
+          1406
+        ],
+        [
+          "why",
+          1404
+        ],
+        [
+          "packages",
+          1303
+        ]
+      ],
+      "score": 88.4,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskPlayStation",
+      "outbound_tweets": 19098,
+      "customer_issues_answered": 18650,
+      "outbound_to_inbound_link_rate": 0.9765420462875694,
+      "response_links": 18694,
+      "usable_historical_brand_responses": 18650,
+      "linked_customer_replies": 9751,
+      "reconstructed_components": 12857,
+      "average_component_size": 3.212,
+      "topical_tokens_with_frequency_at_least_3": 4066,
+      "top_issue_terms": [
+        [
+          "account",
+          3020
+        ],
+        [
+          "psn",
+          1750
+        ],
+        [
+          "error",
+          1733
+        ],
+        [
+          "playstation",
+          1561
+        ],
+        [
+          "game",
+          1478
+        ],
+        [
+          "what",
+          1239
+        ],
+        [
+          "how",
+          1202
+        ],
+        [
+          "code",
+          1142
+        ],
+        [
+          "can't",
+          1113
+        ],
+        [
+          "now",
+          1104
+        ],
+        [
+          "tried",
+          1064
+        ],
+        [
+          "says",
+          1055
+        ]
+      ],
+      "score": 88.12,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "GWRHelp",
+      "outbound_tweets": 19364,
+      "customer_issues_answered": 18506,
+      "outbound_to_inbound_link_rate": 0.9556909729394754,
+      "response_links": 19294,
+      "usable_historical_brand_responses": 18506,
+      "linked_customer_replies": 13127,
+      "reconstructed_components": 11502,
+      "average_component_size": 3.819,
+      "topical_tokens_with_frequency_at_least_3": 4354,
+      "top_issue_terms": [
+        [
+          "train",
+          4823
+        ],
+        [
+          "paddington",
+          2094
+        ],
+        [
+          "trains",
+          2009
+        ],
+        [
+          "service",
+          1939
+        ],
+        [
+          "why",
+          1728
+        ],
+        [
+          "late",
+          1449
+        ],
+        [
+          "what",
+          1427
+        ],
+        [
+          "now",
+          1397
+        ],
+        [
+          "ticket",
+          1376
+        ],
+        [
+          "there",
+          1293
+        ],
+        [
+          "time",
+          1250
+        ],
+        [
+          "bristol",
+          1167
+        ]
+      ],
+      "score": 87.52,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "VerizonSupport",
+      "outbound_tweets": 17966,
+      "customer_issues_answered": 17534,
+      "outbound_to_inbound_link_rate": 0.9759545808749861,
+      "response_links": 17851,
+      "usable_historical_brand_responses": 17534,
+      "linked_customer_replies": 12953,
+      "reconstructed_components": 9207,
+      "average_component_size": 4.346,
+      "topical_tokens_with_frequency_at_least_3": 3818,
+      "top_issue_terms": [
+        [
+          "service",
+          2346
+        ],
+        [
+          "internet",
+          1722
+        ],
+        [
+          "verizon",
+          1425
+        ],
+        [
+          "fios",
+          1401
+        ],
+        [
+          "phone",
+          1371
+        ],
+        [
+          "now",
+          1189
+        ],
+        [
+          "what",
+          1119
+        ],
+        [
+          "customer",
+          1024
+        ],
+        [
+          "yes",
+          967
+        ],
+        [
+          "why",
+          918
+        ],
+        [
+          "still",
+          866
+        ],
+        [
+          "there",
+          809
+        ]
+      ],
+      "score": 87.41,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "O2",
+      "outbound_tweets": 16212,
+      "customer_issues_answered": 15952,
+      "outbound_to_inbound_link_rate": 0.9839624969158648,
+      "response_links": 16091,
+      "usable_historical_brand_responses": 15952,
+      "linked_customer_replies": 8508,
+      "reconstructed_components": 10048,
+      "average_component_size": 3.448,
+      "topical_tokens_with_frequency_at_least_3": 4032,
+      "top_issue_terms": [
+        [
+          "phone",
+          2800
+        ],
+        [
+          "service",
+          1550
+        ],
+        [
+          "now",
+          1353
+        ],
+        [
+          "customer",
+          1218
+        ],
+        [
+          "iphone",
+          1123
+        ],
+        [
+          "what",
+          1108
+        ],
+        [
+          "why",
+          1087
+        ],
+        [
+          "still",
+          1031
+        ],
+        [
+          "contract",
+          1026
+        ],
+        [
+          "how",
+          1016
+        ],
+        [
+          "data",
+          1015
+        ],
+        [
+          "new",
+          960
+        ]
+      ],
+      "score": 87.29,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "ATVIAssist",
+      "outbound_tweets": 17650,
+      "customer_issues_answered": 16879,
+      "outbound_to_inbound_link_rate": 0.9563172804532578,
+      "response_links": 17531,
+      "usable_historical_brand_responses": 16879,
+      "linked_customer_replies": 13055,
+      "reconstructed_components": 12563,
+      "average_component_size": 3.435,
+      "topical_tokens_with_frequency_at_least_3": 3253,
+      "top_issue_terms": [
+        [
+          "game",
+          4222
+        ],
+        [
+          "fix",
+          3426
+        ],
+        [
+          "play",
+          1364
+        ],
+        [
+          "still",
+          1319
+        ],
+        [
+          "error",
+          1077
+        ],
+        [
+          "getting",
+          1070
+        ],
+        [
+          "cod",
+          1036
+        ],
+        [
+          "one",
+          1007
+        ],
+        [
+          "there",
+          1006
+        ],
+        [
+          "after",
+          998
+        ],
+        [
+          "servers",
+          985
+        ],
+        [
+          "any",
+          956
+        ]
+      ],
+      "score": 87.27,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "sprintcare",
+      "outbound_tweets": 22381,
+      "customer_issues_answered": 20026,
+      "outbound_to_inbound_link_rate": 0.8947768196237881,
+      "response_links": 22335,
+      "usable_historical_brand_responses": 20026,
+      "linked_customer_replies": 8894,
+      "reconstructed_components": 15538,
+      "average_component_size": 3.01,
+      "topical_tokens_with_frequency_at_least_3": 4125,
+      "top_issue_terms": [
+        [
+          "service",
+          4323
+        ],
+        [
+          "phone",
+          3285
+        ],
+        [
+          "sprint",
+          2817
+        ],
+        [
+          "customer",
+          1924
+        ],
+        [
+          "why",
+          1318
+        ],
+        [
+          "what",
+          1214
+        ],
+        [
+          "iphone",
+          1207
+        ],
+        [
+          "how",
+          1173
+        ],
+        [
+          "now",
+          1132
+        ],
+        [
+          "still",
+          997
+        ],
+        [
+          "i'm",
+          963
+        ],
+        [
+          "time",
+          905
+        ]
+      ],
+      "score": 87.03,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskTarget",
+      "outbound_tweets": 13218,
+      "customer_issues_answered": 13135,
+      "outbound_to_inbound_link_rate": 0.9937206839158723,
+      "response_links": 13218,
+      "usable_historical_brand_responses": 13135,
+      "linked_customer_replies": 4713,
+      "reconstructed_components": 11495,
+      "average_component_size": 2.56,
+      "topical_tokens_with_frequency_at_least_3": 4469,
+      "top_issue_terms": [
+        [
+          "store",
+          1889
+        ],
+        [
+          "target",
+          1642
+        ],
+        [
+          "online",
+          1263
+        ],
+        [
+          "why",
+          1154
+        ],
+        [
+          "what",
+          1032
+        ],
+        [
+          "order",
+          1020
+        ],
+        [
+          "one",
+          926
+        ],
+        [
+          "there",
+          861
+        ],
+        [
+          "amp",
+          852
+        ],
+        [
+          "how",
+          784
+        ],
+        [
+          "hey",
+          712
+        ],
+        [
+          "only",
+          711
+        ]
+      ],
+      "score": 86.85,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "British_Airways",
+      "outbound_tweets": 29361,
+      "customer_issues_answered": 24084,
+      "outbound_to_inbound_link_rate": 0.8202717891080004,
+      "response_links": 29315,
+      "usable_historical_brand_responses": 24084,
+      "linked_customer_replies": 12485,
+      "reconstructed_components": 16839,
+      "average_component_size": 3.482,
+      "topical_tokens_with_frequency_at_least_3": 5907,
+      "top_issue_terms": [
+        [
+          "flight",
+          6575
+        ],
+        [
+          "service",
+          1683
+        ],
+        [
+          "now",
+          1556
+        ],
+        [
+          "check",
+          1532
+        ],
+        [
+          "how",
+          1528
+        ],
+        [
+          "what",
+          1499
+        ],
+        [
+          "flights",
+          1410
+        ],
+        [
+          "amp",
+          1381
+        ],
+        [
+          "there",
+          1380
+        ],
+        [
+          "booking",
+          1357
+        ],
+        [
+          "lhr",
+          1330
+        ],
+        [
+          "time",
+          1316
+        ]
+      ],
+      "score": 86.42,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "sainsburys",
+      "outbound_tweets": 19466,
+      "customer_issues_answered": 17717,
+      "outbound_to_inbound_link_rate": 0.9101510325696085,
+      "response_links": 19417,
+      "usable_historical_brand_responses": 17717,
+      "linked_customer_replies": 9331,
+      "reconstructed_components": 11396,
+      "average_component_size": 3.523,
+      "topical_tokens_with_frequency_at_least_3": 5790,
+      "top_issue_terms": [
+        [
+          "store",
+          2230
+        ],
+        [
+          "one",
+          1090
+        ],
+        [
+          "there",
+          993
+        ],
+        [
+          "what",
+          969
+        ],
+        [
+          "amp",
+          965
+        ],
+        [
+          "why",
+          946
+        ],
+        [
+          "bought",
+          839
+        ],
+        [
+          "them",
+          833
+        ],
+        [
+          "had",
+          814
+        ],
+        [
+          "now",
+          804
+        ],
+        [
+          "today",
+          785
+        ],
+        [
+          "any",
+          770
+        ]
+      ],
+      "score": 86.42,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskPayPal",
+      "outbound_tweets": 11298,
+      "customer_issues_answered": 11181,
+      "outbound_to_inbound_link_rate": 0.9896441848114711,
+      "response_links": 11270,
+      "usable_historical_brand_responses": 11181,
+      "linked_customer_replies": 3045,
+      "reconstructed_components": 9931,
+      "average_component_size": 2.441,
+      "topical_tokens_with_frequency_at_least_3": 3591,
+      "top_issue_terms": [
+        [
+          "account",
+          2242
+        ],
+        [
+          "paypal",
+          2186
+        ],
+        [
+          "money",
+          1352
+        ],
+        [
+          "email",
+          956
+        ],
+        [
+          "why",
+          813
+        ],
+        [
+          "how",
+          784
+        ],
+        [
+          "now",
+          693
+        ],
+        [
+          "bank",
+          626
+        ],
+        [
+          "still",
+          615
+        ],
+        [
+          "sent",
+          606
+        ],
+        [
+          "what",
+          571
+        ],
+        [
+          "service",
+          555
+        ]
+      ],
+      "score": 85.9,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskLyft",
+      "outbound_tweets": 11809,
+      "customer_issues_answered": 11437,
+      "outbound_to_inbound_link_rate": 0.9684986027606063,
+      "response_links": 11795,
+      "usable_historical_brand_responses": 11437,
+      "linked_customer_replies": 2912,
+      "reconstructed_components": 10471,
+      "average_component_size": 2.405,
+      "topical_tokens_with_frequency_at_least_3": 3400,
+      "top_issue_terms": [
+        [
+          "driver",
+          3800
+        ],
+        [
+          "lyft",
+          3746
+        ],
+        [
+          "ride",
+          1685
+        ],
+        [
+          "drivers",
+          1077
+        ],
+        [
+          "car",
+          899
+        ],
+        [
+          "how",
+          898
+        ],
+        [
+          "why",
+          872
+        ],
+        [
+          "like",
+          819
+        ],
+        [
+          "app",
+          783
+        ],
+        [
+          "now",
+          693
+        ],
+        [
+          "had",
+          683
+        ],
+        [
+          "what",
+          662
+        ]
+      ],
+      "score": 85.64,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "XboxSupport",
+      "outbound_tweets": 24557,
+      "customer_issues_answered": 20213,
+      "outbound_to_inbound_link_rate": 0.8231054281874822,
+      "response_links": 24341,
+      "usable_historical_brand_responses": 20213,
+      "linked_customer_replies": 11833,
+      "reconstructed_components": 14254,
+      "average_component_size": 3.538,
+      "topical_tokens_with_frequency_at_least_3": 4239,
+      "top_issue_terms": [
+        [
+          "xbox",
+          6920
+        ],
+        [
+          "one",
+          3303
+        ],
+        [
+          "game",
+          2145
+        ],
+        [
+          "now",
+          1371
+        ],
+        [
+          "why",
+          1345
+        ],
+        [
+          "any",
+          1344
+        ],
+        [
+          "games",
+          1279
+        ],
+        [
+          "still",
+          1276
+        ],
+        [
+          "play",
+          1229
+        ],
+        [
+          "update",
+          1218
+        ],
+        [
+          "what",
+          1171
+        ],
+        [
+          "there",
+          1167
+        ]
+      ],
+      "score": 85.52,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "ArgosHelpers",
+      "outbound_tweets": 12174,
+      "customer_issues_answered": 11444,
+      "outbound_to_inbound_link_rate": 0.9400361425989814,
+      "response_links": 12053,
+      "usable_historical_brand_responses": 11444,
+      "linked_customer_replies": 6700,
+      "reconstructed_components": 7982,
+      "average_component_size": 3.349,
+      "topical_tokens_with_frequency_at_least_3": 3376,
+      "top_issue_terms": [
+        [
+          "argos",
+          1841
+        ],
+        [
+          "order",
+          1422
+        ],
+        [
+          "store",
+          1264
+        ],
+        [
+          "delivery",
+          1066
+        ],
+        [
+          "stock",
+          890
+        ],
+        [
+          "one",
+          854
+        ],
+        [
+          "service",
+          800
+        ],
+        [
+          "now",
+          797
+        ],
+        [
+          "item",
+          772
+        ],
+        [
+          "today",
+          771
+        ],
+        [
+          "still",
+          690
+        ],
+        [
+          "there",
+          686
+        ]
+      ],
+      "score": 84.72,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Safaricom_Care",
+      "outbound_tweets": 16077,
+      "customer_issues_answered": 13881,
+      "outbound_to_inbound_link_rate": 0.8634073521179324,
+      "response_links": 15471,
+      "usable_historical_brand_responses": 13881,
+      "linked_customer_replies": 7674,
+      "reconstructed_components": 9753,
+      "average_component_size": 3.373,
+      "topical_tokens_with_frequency_at_least_3": 2897,
+      "top_issue_terms": [
+        [
+          "mpesa",
+          1593
+        ],
+        [
+          "number",
+          1556
+        ],
+        [
+          "kindly",
+          1511
+        ],
+        [
+          "call",
+          1113
+        ],
+        [
+          "how",
+          1070
+        ],
+        [
+          "line",
+          856
+        ],
+        [
+          "check",
+          791
+        ],
+        [
+          "safaricom",
+          731
+        ],
+        [
+          "now",
+          714
+        ],
+        [
+          "money",
+          711
+        ],
+        [
+          "assist",
+          704
+        ],
+        [
+          "what",
+          703
+        ]
+      ],
+      "score": 84.26,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "marksandspencer",
+      "outbound_tweets": 11504,
+      "customer_issues_answered": 10457,
+      "outbound_to_inbound_link_rate": 0.9089881780250347,
+      "response_links": 11460,
+      "usable_historical_brand_responses": 10457,
+      "linked_customer_replies": 4309,
+      "reconstructed_components": 8239,
+      "average_component_size": 2.914,
+      "topical_tokens_with_frequency_at_least_3": 4225,
+      "top_issue_terms": [
+        [
+          "amp",
+          1364
+        ],
+        [
+          "christmas",
+          1038
+        ],
+        [
+          "store",
+          1020
+        ],
+        [
+          "one",
+          633
+        ],
+        [
+          "today",
+          610
+        ],
+        [
+          "what",
+          598
+        ],
+        [
+          "there",
+          591
+        ],
+        [
+          "why",
+          565
+        ],
+        [
+          "any",
+          555
+        ],
+        [
+          "service",
+          546
+        ],
+        [
+          "order",
+          530
+        ],
+        [
+          "had",
+          510
+        ]
+      ],
+      "score": 83.76,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Tesco",
+      "outbound_tweets": 38573,
+      "customer_issues_answered": 25282,
+      "outbound_to_inbound_link_rate": 0.6554325564514039,
+      "response_links": 38501,
+      "usable_historical_brand_responses": 25282,
+      "linked_customer_replies": 12812,
+      "reconstructed_components": 17386,
+      "average_component_size": 3.951,
+      "topical_tokens_with_frequency_at_least_3": 7036,
+      "top_issue_terms": [
+        [
+          "tesco",
+          2735
+        ],
+        [
+          "store",
+          2556
+        ],
+        [
+          "why",
+          1639
+        ],
+        [
+          "one",
+          1618
+        ],
+        [
+          "delivery",
+          1599
+        ],
+        [
+          "what",
+          1570
+        ],
+        [
+          "there",
+          1508
+        ],
+        [
+          "now",
+          1439
+        ],
+        [
+          "amp",
+          1317
+        ],
+        [
+          "them",
+          1300
+        ],
+        [
+          "had",
+          1294
+        ],
+        [
+          "any",
+          1207
+        ]
+      ],
+      "score": 83.37,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "idea_cares",
+      "outbound_tweets": 15724,
+      "customer_issues_answered": 12887,
+      "outbound_to_inbound_link_rate": 0.8195751717120325,
+      "response_links": 15617,
+      "usable_historical_brand_responses": 12887,
+      "linked_customer_replies": 8730,
+      "reconstructed_components": 8414,
+      "average_component_size": 3.894,
+      "topical_tokens_with_frequency_at_least_3": 3505,
+      "top_issue_terms": [
+        [
+          "idea",
+          4172
+        ],
+        [
+          "network",
+          1807
+        ],
+        [
+          "number",
+          1664
+        ],
+        [
+          "service",
+          1382
+        ],
+        [
+          "call",
+          1295
+        ],
+        [
+          "customer",
+          1127
+        ],
+        [
+          "port",
+          1075
+        ],
+        [
+          "any",
+          915
+        ],
+        [
+          "days",
+          846
+        ],
+        [
+          "what",
+          841
+        ],
+        [
+          "now",
+          801
+        ],
+        [
+          "care",
+          765
+        ]
+      ],
+      "score": 82.87,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskeBay",
+      "outbound_tweets": 9686,
+      "customer_issues_answered": 8755,
+      "outbound_to_inbound_link_rate": 0.9038818913896345,
+      "response_links": 9624,
+      "usable_historical_brand_responses": 8755,
+      "linked_customer_replies": 4488,
+      "reconstructed_components": 5886,
+      "average_component_size": 3.398,
+      "topical_tokens_with_frequency_at_least_3": 3189,
+      "top_issue_terms": [
+        [
+          "ebay",
+          1979
+        ],
+        [
+          "item",
+          1298
+        ],
+        [
+          "seller",
+          960
+        ],
+        [
+          "now",
+          758
+        ],
+        [
+          "why",
+          713
+        ],
+        [
+          "how",
+          699
+        ],
+        [
+          "account",
+          666
+        ],
+        [
+          "what",
+          640
+        ],
+        [
+          "buyer",
+          554
+        ],
+        [
+          "there",
+          544
+        ],
+        [
+          "still",
+          519
+        ],
+        [
+          "amp",
+          470
+        ]
+      ],
+      "score": 82.47,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AirAsiaSupport",
+      "outbound_tweets": 12829,
+      "customer_issues_answered": 10740,
+      "outbound_to_inbound_link_rate": 0.8371657962428872,
+      "response_links": 12735,
+      "usable_historical_brand_responses": 10740,
+      "linked_customer_replies": 5869,
+      "reconstructed_components": 7220,
+      "average_component_size": 3.577,
+      "topical_tokens_with_frequency_at_least_3": 2940,
+      "top_issue_terms": [
+        [
+          "flight",
+          2838
+        ],
+        [
+          "booking",
+          2188
+        ],
+        [
+          "check",
+          1038
+        ],
+        [
+          "how",
+          1006
+        ],
+        [
+          "number",
+          990
+        ],
+        [
+          "refund",
+          976
+        ],
+        [
+          "change",
+          936
+        ],
+        [
+          "email",
+          795
+        ],
+        [
+          "name",
+          740
+        ],
+        [
+          "ticket",
+          653
+        ],
+        [
+          "airasia",
+          629
+        ],
+        [
+          "what",
+          570
+        ]
+      ],
+      "score": 82.26,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "SW_Help",
+      "outbound_tweets": 12231,
+      "customer_issues_answered": 10218,
+      "outbound_to_inbound_link_rate": 0.8354181996566102,
+      "response_links": 11792,
+      "usable_historical_brand_responses": 10218,
+      "linked_customer_replies": 7977,
+      "reconstructed_components": 6693,
+      "average_component_size": 3.954,
+      "topical_tokens_with_frequency_at_least_3": 3107,
+      "top_issue_terms": [
+        [
+          "train",
+          2393
+        ],
+        [
+          "waterloo",
+          1727
+        ],
+        [
+          "why",
+          1360
+        ],
+        [
+          "trains",
+          1250
+        ],
+        [
+          "what",
+          1020
+        ],
+        [
+          "service",
+          991
+        ],
+        [
+          "ticket",
+          837
+        ],
+        [
+          "there",
+          821
+        ],
+        [
+          "late",
+          779
+        ],
+        [
+          "how",
+          762
+        ],
+        [
+          "any",
+          731
+        ],
+        [
+          "now",
+          696
+        ]
+      ],
+      "score": 81.92,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "Morrisons",
+      "outbound_tweets": 10126,
+      "customer_issues_answered": 8526,
+      "outbound_to_inbound_link_rate": 0.8419909144775825,
+      "response_links": 10028,
+      "usable_historical_brand_responses": 8526,
+      "linked_customer_replies": 3925,
+      "reconstructed_components": 6173,
+      "average_component_size": 3.26,
+      "topical_tokens_with_frequency_at_least_3": 3817,
+      "top_issue_terms": [
+        [
+          "store",
+          1294
+        ],
+        [
+          "had",
+          512
+        ],
+        [
+          "why",
+          496
+        ],
+        [
+          "today",
+          492
+        ],
+        [
+          "there",
+          492
+        ],
+        [
+          "one",
+          469
+        ],
+        [
+          "what",
+          468
+        ],
+        [
+          "more",
+          437
+        ],
+        [
+          "amp",
+          417
+        ],
+        [
+          "them",
+          412
+        ],
+        [
+          "any",
+          402
+        ],
+        [
+          "staff",
+          393
+        ]
+      ],
+      "score": 81.19,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AdobeCare",
+      "outbound_tweets": 9917,
+      "customer_issues_answered": 8207,
+      "outbound_to_inbound_link_rate": 0.8275688212160935,
+      "response_links": 9888,
+      "usable_historical_brand_responses": 8207,
+      "linked_customer_replies": 4567,
+      "reconstructed_components": 5358,
+      "average_component_size": 3.698,
+      "topical_tokens_with_frequency_at_least_3": 3057,
+      "top_issue_terms": [
+        [
+          "adobe",
+          1242
+        ],
+        [
+          "lightroom",
+          749
+        ],
+        [
+          "now",
+          653
+        ],
+        [
+          "new",
+          588
+        ],
+        [
+          "how",
+          567
+        ],
+        [
+          "why",
+          524
+        ],
+        [
+          "what",
+          507
+        ],
+        [
+          "i'm",
+          501
+        ],
+        [
+          "update",
+          493
+        ],
+        [
+          "premiere",
+          485
+        ],
+        [
+          "photoshop",
+          481
+        ],
+        [
+          "there",
+          469
+        ]
+      ],
+      "score": 80.55,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "BofA_Help",
+      "outbound_tweets": 12683,
+      "customer_issues_answered": 9299,
+      "outbound_to_inbound_link_rate": 0.7331861546952614,
+      "response_links": 12654,
+      "usable_historical_brand_responses": 9299,
+      "linked_customer_replies": 3783,
+      "reconstructed_components": 7124,
+      "average_component_size": 3.307,
+      "topical_tokens_with_frequency_at_least_3": 3046,
+      "top_issue_terms": [
+        [
+          "bank",
+          1804
+        ],
+        [
+          "account",
+          1417
+        ],
+        [
+          "card",
+          958
+        ],
+        [
+          "america",
+          888
+        ],
+        [
+          "money",
+          822
+        ],
+        [
+          "customer",
+          738
+        ],
+        [
+          "service",
+          669
+        ],
+        [
+          "why",
+          582
+        ],
+        [
+          "how",
+          550
+        ],
+        [
+          "now",
+          513
+        ],
+        [
+          "what",
+          497
+        ],
+        [
+          "time",
+          467
+        ]
+      ],
+      "score": 79.56,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "MicrosoftHelps",
+      "outbound_tweets": 11304,
+      "customer_issues_answered": 8461,
+      "outbound_to_inbound_link_rate": 0.7484961075725407,
+      "response_links": 11223,
+      "usable_historical_brand_responses": 8461,
+      "linked_customer_replies": 6228,
+      "reconstructed_components": 4848,
+      "average_component_size": 4.6,
+      "topical_tokens_with_frequency_at_least_3": 2911,
+      "top_issue_terms": [
+        [
+          "windows",
+          1775
+        ],
+        [
+          "update",
+          1542
+        ],
+        [
+          "now",
+          757
+        ],
+        [
+          "how",
+          582
+        ],
+        [
+          "any",
+          574
+        ],
+        [
+          "after",
+          558
+        ],
+        [
+          "what",
+          552
+        ],
+        [
+          "it's",
+          544
+        ],
+        [
+          "there",
+          539
+        ],
+        [
+          "still",
+          536
+        ],
+        [
+          "i'm",
+          525
+        ],
+        [
+          "microsoft",
+          502
+        ]
+      ],
+      "score": 78.97,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "airtel_care",
+      "outbound_tweets": 9881,
+      "customer_issues_answered": 7442,
+      "outbound_to_inbound_link_rate": 0.7531626353607934,
+      "response_links": 9869,
+      "usable_historical_brand_responses": 7442,
+      "linked_customer_replies": 2852,
+      "reconstructed_components": 4854,
+      "average_component_size": 3.621,
+      "topical_tokens_with_frequency_at_least_3": 2230,
+      "top_issue_terms": [
+        [
+          "data",
+          999
+        ],
+        [
+          "airtel",
+          960
+        ],
+        [
+          "network",
+          823
+        ],
+        [
+          "line",
+          783
+        ],
+        [
+          "pls",
+          710
+        ],
+        [
+          "number",
+          604
+        ],
+        [
+          "now",
+          556
+        ],
+        [
+          "how",
+          546
+        ],
+        [
+          "service",
+          506
+        ],
+        [
+          "customer",
+          497
+        ],
+        [
+          "what",
+          448
+        ],
+        [
+          "call",
+          439
+        ]
+      ],
+      "score": 78.53,
+      "golden_set_eligible": true
+    },
+    {
+      "brand": "AskAmex",
+      "outbound_tweets": 11358,
+      "customer_issues_answered": 7952,
+      "outbound_to_inbound_link_rate": 0.7001232611375242,
+      "response_links": 11111,
+      "usable_historical_brand_responses": 7952,
+      "linked_customer_replies": 4869,
+      "reconstructed_components": 4484,
+      "average_component_size": 4.564,
+      "topical_tokens_with_frequency_at_least_3": 2312,
+      "top_issue_terms": [
+        [
+          "card",
+          2392
+        ],
+        [
+          "amex",
+          1281
+        ],
+        [
+          "account",
+          871
+        ],
+        [
+          "how",
+          769
+        ],
+        [
+          "yes",
+          498
+        ],
+        [
+          "credit",
+          476
+        ],
+        [
+          "there",
+          435
+        ],
+        [
+          "service",
+          425
+        ],
+        [
+          "customer",
+          413
+        ],
+        [
+          "what",
+          412
+        ],
+        [
+          "platinum",
+          403
+        ],
+        [
+          "call",
+          371
+        ]
+      ],
+      "score": 77.64,
+      "golden_set_eligible": true
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "phase": 2,
+  "brand": "AppleSupport",
+  "source_csv": "C:\\Users\\DELL\\Desktop\\hiver side project\\data\\twcs.csv",
+  "source_file_size_bytes": 516508641,
+  "source_csv_rows_scanned": 2811774,
+  "schema": [
+    "tweet_id",
+    "author_id",
+    "inbound",
+    "created_at",
+    "text",
+    "response_tweet_id",
+    "in_response_to_tweet_id"
+  ],
+  "extraction_boundary": "All outbound AppleSupport tweets, plus inbound customer tweets directly connected through response_tweet_id or in_response_to_tweet_id, or directly named as the parent of an AppleSupport reply.",
+  "total_applesupport_tweets": 106860,
+  "outbound_applesupport_tweets": 106860,
+  "inbound_customer_tweets_in_retained_conversations": 119895,
+  "unique_customers": 77431,
+  "reconstructed_components_including_brand_only": 83449,
+  "customer_brand_conversation_count": 83449,
+  "brand_only_component_count": 0,
+  "customer_messages_with_direct_applesupport_response": 106623,
+  "response_coverage": 0.8893031402477167,
+  "customer_replies_to_applesupport": 36658,
+  "conversation_length_unit": "retained messages per customer-brand component",
+  "average_conversation_length": 2.7172884036956706,
+  "median_conversation_length": 2,
+  "maximum_conversation_length": 266,
+  "retained_message_date_range_utc": [
+    "2016-03-03T13:00:08+00:00",
+    "2017-12-03T23:12:28+00:00"
+  ],
+  "data_quality": {
+    "invalid_inbound_values_in_source": 0,
+    "duplicate_applesupport_tweet_ids": 0,
+    "applesupport_rows_with_missing_text": 0,
+    "applesupport_rows_with_missing_author": 0,
+    "related_inbound_rows_with_missing_text": 0,
+    "related_inbound_rows_with_missing_author": 0,
+    "limitations": [
+      "TWCS relationship fields may be absent or contain multiple ids.",
+      "Only directly observed links are used; missing links are not inferred.",
+      "Brand-only components are retained but excluded from customer-brand conversation-length statistics."
+    ]
+  },
+  "outputs": {
+    "conversations_jsonl": "C:\\Users\\DELL\\Documents\\Codex\\2026-09-12\\excellent-the-new-dataset-is-much\\outputs\\phase2\\data\\applesupport_conversations.jsonl"
+  }
+}
