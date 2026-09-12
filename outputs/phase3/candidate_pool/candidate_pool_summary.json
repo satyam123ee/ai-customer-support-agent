@@ -1,0 +1,161 @@
+{
+  "phase": "3B",
+  "target_candidate_count": 700,
+  "actual_candidate_count": 700,
+  "source_conversations": "C:\\Users\\DELL\\Documents\\Codex\\2026-09-12\\excellent-the-new-dataset-is-much\\outputs\\phase2\\data\\applesupport_conversations.jsonl",
+  "generated_at_utc": "2026-09-12T14:11:12Z",
+  "selection_strategy": {
+    "intent_allocation_method": "proportional allocation across the 15 discovered primary intents using Phase 3A counts as weights",
+    "special_bucket_target": {
+      "unclassified": 60,
+      "multi_intent": 80,
+      "ambiguous": 40
+    },
+    "quality_ranking": [
+      "strongest evidence",
+      "more content words",
+      "longer conversations",
+      "earlier timestamps"
+    ],
+    "reproducibility": "Deterministic sort order and fixed quotas; no random sampling",
+    "quality_filtering": [
+      "Reject empty or non-informative records",
+      "Reject low token-diversity and repeated-token noise",
+      "Reject clear mojibake or Unicode-artifact patterns",
+      "Reject exact duplicates and clearly redundant near-duplicates within each bucket",
+      "Backfill rejected records from the same bucket or primary-intent quota"
+    ]
+  },
+  "category_counts": {
+    "primary_intent_examples": 520,
+    "unclassified_examples": 60,
+    "multi_intent_examples": 80,
+    "ambiguous_examples": 40
+  },
+  "intent_counts": {
+    "app_store_media_services": 58,
+    "apple_id_icloud_account": 28,
+    "apple_watch": 6,
+    "battery_power_charging": 50,
+    "billing_purchases_subscriptions": 12,
+    "connectivity_network": 29,
+    "device_setup_activation_migration": 17,
+    "hardware_accessories": 35,
+    "keyboard_text_rendering": 51,
+    "mac_computer": 12,
+    "messaging_calls_facetime": 31,
+    "performance_stability": 49,
+    "software_update_os": 243,
+    "store_orders_repairs": 12,
+    "support_contact_experience": 7
+  },
+  "source_message_totals": {
+    "total_customer_messages_analyzed": 119895,
+    "total_primary_intent_messages": 43237,
+    "total_unclassified_messages": 47297,
+    "total_multi_intent_messages": 28505,
+    "total_ambiguous_messages": 856
+  },
+  "quality_filtering": {
+    "rejection_counts": {
+      "clearly_redundant_near_duplicate": 6,
+      "exact_duplicate": 8,
+      "low_token_diversity": 22,
+      "mojibake_or_unicode_artifact": 4,
+      "repeated_token_noise": 2
+    },
+    "replacement_count": 42,
+    "replacements_by_bucket": {
+      "ambiguous": 7,
+      "multi_intent": 1,
+      "primary_intent": 8,
+      "unclassified": 26
+    },
+    "replacement_examples": [
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "829118",
+        "rejected_text": "@AppleSupport NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO NO!",
+        "replacement_tweet_id": "2773340",
+        "replacement_text": "@AppleSupport I don’t know his name , I asked before I left , they refused to give me any information about the employee’s name or work ID , but I have a pic of him I took I’m not sure if it’s ok.  He is the on the right side wearing a company name tag which I was told he didn’t have a work ID https://t.co/LCQ4fqFtDg"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2148125",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ FIX IT @115858.",
+        "replacement_tweet_id": "480560",
+        "replacement_text": "@AppleSupport can you fix a lot of this stuff like i cant even write the word IT i would have to do stuff like put an extra t or something then when ur in ft u arent able to change the song or turn I️t up u have to do I️t by going to the app its annoying tbh @157399"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2303705",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ @115858 FIX THIS  I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️",
+        "replacement_tweet_id": "2838646",
+        "replacement_text": "@AppleSupport In the past, I’ve had to remove the email accounts from my iPhone (all 8 of them) and reinstall them. However, that isn’t fixing the issue this time around &amp; the settings menu has changed from the last time I had to do this, so I can’t figure out what I did to fix it last time."
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2410364",
+        "rejected_text": "@115858 I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️  \nFix this.",
+        "replacement_tweet_id": "2487132",
+        "replacement_text": "@AppleSupport when i go on breaks at work i will set a timer but they never go off when the 15 mins is up, they will go off hours later. not only that but my notifs won’t pop up for a while and eventually they will flood in all at once saying they’re from like an hour ago. why?!"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "1773913",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ @115858 fix this shit",
+        "replacement_tweet_id": "2310911",
+        "replacement_text": "@AppleSupport I need help with being able to work one of the apps on my phone. All of my memories are on google photos and it was working an hour ago, But now the app is saying how I have to turn on photo usage in settings but every time I click to do it, the option isn’t there"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2117157",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ @115858 Fix This!",
+        "replacement_tweet_id": "2845660",
+        "replacement_text": "You know @115858, y’all have got me fucked up this entire week with your bullshit and getting stuff right on my phone, and every damn day there’s a new damn problem and it’s been pissing me off so damn much but y’all lucky that y’all got me whipped to hell bc fuck I love Apple..."
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2113829",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ @115858 Fix this",
+        "replacement_tweet_id": "2261530",
+        "replacement_text": "@AppleSupport Sometimes it works and sometimes it doesn’t. I️ was trying to write an email and I wasn’t able to move the cursor to type before a word. I️ wasn’t able to hold and place the cursor where ever I️ needed it either. Seems to be working okay now. The issue was in the Email app"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2618413",
+        "rejected_text": "I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ WTF is this about @115858 ?",
+        "replacement_tweet_id": "2039290",
+        "replacement_text": "Just got my iPhone X it’s already scratched and I’m so careful with it have a case one always and always wash my hands before I use it @AppleSupport plz help I’m so sad that it’s already scratched the day I️ got it it was scratched but others r saying they have the same problem"
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2129134",
+        "rejected_text": ".@116333 I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️",
+        "replacement_tweet_id": "2890727",
+        "replacement_text": "@115858 I.t I.t I.t I.t I.t I.t I.t I.t I.t I.t I.t I.t I.t \n\nYal acting like yal don’t see this shit (would have used I.t but it turns into I.t so i have to use shit)tripping out and that’s annoying."
+      },
+      {
+        "bucket": "unclassified",
+        "reason": "low_token_diversity",
+        "rejected_tweet_id": "2273926",
+        "rejected_text": "Dawg, 👁 just spazzed. @AppleSupport fix it NOW. I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I️ I I️ I️ I️",
+        "replacement_tweet_id": "2311608",
+        "replacement_text": "@AppleSupport I think this is a global problem, because I read a lot of comments about it on Twitter and websites, I've been using iPhone for 10 years, and I know how to put iPhone in DFU mode, The problem is that I do not have a backup, and I do not want to lose a date on iPhone , https://t.co/WqknUKB2RF"
+      }
+    ]
+  },
+  "output_files": {
+    "candidate_pool": "C:\\Users\\DELL\\Documents\\Codex\\2026-09-12\\excellent-the-new-dataset-is-much\\outputs\\phase3\\candidate_pool\\candidate_pool.jsonl",
+    "report": "C:\\Users\\DELL\\Documents\\Codex\\2026-09-12\\excellent-the-new-dataset-is-much\\outputs\\phase3\\reports\\PHASE3B_CANDIDATE_POOL_REPORT.md"
+  }
+}

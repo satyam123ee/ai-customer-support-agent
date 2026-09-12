@@ -5,3 +5,4 @@ __pycache__/
 .venv/
 venv/
 .env
+outputs/phase3/candidate_pool/candidate_pool.pre_quality_filter_backup.jsonl

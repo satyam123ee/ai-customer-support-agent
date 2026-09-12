@@ -103,32 +103,43 @@ outputs/phase3/scripts/discover_intents.py
 outputs/phase3/taxonomy/intent_taxonomy.json
 outputs/phase3/taxonomy/INTENT_TAXONOMY_REPORT.md
 
-## CURRENT TASK
-
 ### Phase 3B — Candidate Pool
 
-STATUS: NOT STARTED
+STATUS: COMPLETE
 
-Goal:
+Goal achieved:
 
-Create a high-quality candidate pool of approximately 500–1000 real AppleSupport customer messages.
+Created a reproducible candidate pool of 700 real AppleSupport customer messages for later labeling and golden-set construction.
 
-The pool should support later human labeling and construction of a golden evaluation set.
+Quality filtering complete:
+- Exact quotas preserved: 520 primary-intent, 60 unclassified, 80 multi-intent, and 40 ambiguous.
+- All 15 primary intents remain represented.
+- Deterministic same-bucket quality filtering removed low-diversity noise, exact duplicates, clearly redundant near-duplicates, and Unicode artifacts.
+- Replacements were sourced only from the same bucket or primary-intent quota.
+- Raw pre-filter output backed up as outputs/phase3/candidate_pool/candidate_pool.pre_quality_filter_backup.jsonl.
 
-Candidate pool should include:
+The final pool includes:
 
-1. Examples from each discovered intent
+1. Coverage across the discovered intents
 2. Ambiguous examples
 3. Unclassified examples
 4. Multi-intent examples
 5. Short but meaningful messages
-6. Different conversation lengths
-7. Different dates
-8. Real customer → AppleSupport interactions
+6. Different conversation lengths and dates
+7. Real customer → AppleSupport interactions
 
-Do NOT manually invent customer messages.
+Files:
 
-Use actual messages from twcs.csv / prepared AppleSupport data.
+outputs/phase3/scripts/build_candidate_pool.py
+outputs/phase3/candidate_pool/candidate_pool.jsonl
+outputs/phase3/candidate_pool/candidate_pool_summary.json
+outputs/phase3/reports/PHASE3B_CANDIDATE_POOL_REPORT.md
+
+## CURRENT TASK
+
+### Phase 3B — Candidate Pool
+
+STATUS: COMPLETE
 
 ## NEXT STEPS
 
