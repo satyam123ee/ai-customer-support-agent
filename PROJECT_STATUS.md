@@ -165,11 +165,91 @@ work/phase3c_validate.py
 1. Inspect existing Phase 3A taxonomy.
 2. Inspect AppleSupport conversation data.
 3. Design a reproducible candidate-sampling strategy.
-4. Later annotate the golden evaluation set manually.
+4. Later review the Phase 3D annotation queue manually.
 5. Later implement/evaluate intent classification.
 6. Later implement retrieval and RAG grounding evaluation.
 7. Later implement response generation and escalation decisions.
 8. Produce final Hiver assignment evaluation/proof.
+
+### Phase 3D — Fast Golden-Set Annotation
+
+STATUS: COMPLETE
+
+Goal achieved:
+
+Created deterministic preliminary annotations for all 200 Phase 3C golden examples and a focused human review queue.
+
+Results:
+- 200 preliminary annotation records generated.
+- 50 records require human review; 150 do not require immediate review under the heuristic rules.
+- Preliminary labels are explicitly not human gold labels.
+- Original source text, metadata, and Phase 3C evaluation placeholders were preserved.
+- No model answers, retrieval judgments, response judgments, or escalation decisions were generated.
+- Independent validation passed, including deterministic repeated-run validation.
+
+Files:
+
+outputs/phase3/scripts/annotate_golden_set.py
+outputs/phase3/golden_set/golden_set_preliminary_annotations.jsonl
+outputs/phase3/golden_set/golden_set_review_queue.jsonl
+outputs/phase3/golden_set/golden_set_annotation_summary.json
+outputs/phase3/reports/PHASE3D_ANNOTATION_REPORT.md
+work/phase3d_validate.py
+
+### Phase 3E — Review-Queue Resolution
+
+STATUS: COMPLETE
+
+Goal achieved:
+
+Resolved the Phase 3D review queue using deterministic Phase 2 conversation context and Phase 3A taxonomy evidence.
+
+Results:
+- Final annotated golden set contains exactly 200 records.
+- 166 records resolved; 34 remain genuinely ambiguous or insufficiently evidenced.
+- 16 review records resolved from historical context; 150 stable records retained from Phase 3D text-based annotations.
+- 20 historical AppleSupport responses copied verbatim with provenance; other gold responses remain null.
+- Original text and metadata were preserved, and retrieval/RAG evaluation fields remain null.
+- Independent validation passed, including historical-response provenance and deterministic repeated-run validation.
+
+Files:
+
+outputs/phase3/scripts/resolve_review_queue.py
+outputs/phase3/golden_set/golden_evaluation_set_annotated.jsonl
+outputs/phase3/golden_set/golden_set_annotation_decisions.jsonl
+outputs/phase3/golden_set/golden_set_annotation_summary.json
+outputs/phase3/reports/PHASE3E_REVIEW_RESOLUTION_REPORT.md
+work/phase3e_validate.py
+
+### Phase 4 — Historical Retrieval Baseline
+
+STATUS: COMPLETE
+
+Goal achieved:
+
+Built and evaluated a deterministic lexical retrieval baseline over the Phase 2 AppleSupport conversation corpus.
+
+Results:
+- Retrieval corpus: 119,895 customer-message units.
+- Eligible curated golden queries: 174; 26 null-gold-intent records excluded from intent metrics.
+- Top-1 intent agreement: 0.5919540229885057.
+- Top-3 intent agreement: 0.7586206896551724.
+- Top-5 intent agreement: 0.8218390804597702.
+- Average top-1 similarity: 0.4603922555022518.
+- No retrieval failures with top_k=5.
+- Human relevance remains pending; no relevance labels were fabricated.
+- Independent validation passed, including source fidelity and deterministic rerun validation.
+
+Files:
+
+outputs/phase4/scripts/build_retrieval_corpus.py
+outputs/phase4/scripts/retrieve.py
+outputs/phase4/scripts/evaluate_retrieval.py
+outputs/phase4/retrieval/retrieval_corpus.jsonl
+outputs/phase4/retrieval/retrieval_results.jsonl
+outputs/phase4/retrieval/retrieval_summary.json
+outputs/phase4/reports/PHASE4_RETRIEVAL_REPORT.md
+work/phase4_validate.py
 
 ## Important Constraints
 

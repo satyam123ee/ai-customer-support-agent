@@ -1,0 +1,159 @@
+{
+  "phase": "4",
+  "retrieval_method": "standard-library sparse TF-IDF cosine similarity",
+  "top_k": 5,
+  "golden_queries": 200,
+  "eligible_evaluation_records": 174,
+  "excluded_records_null_gold_intent": 26,
+  "retrieval_failures_total": 0,
+  "retrieval_failures_eligible": 0,
+  "top_1_intent_agreement": 0.5919540229885057,
+  "top_3_intent_agreement": 0.7586206896551724,
+  "top_5_intent_agreement": 0.8218390804597702,
+  "mean_reciprocal_rank": 0.6737547892720307,
+  "average_top_1_similarity": 0.4603922555022518,
+  "average_retrieved_similarity": 0.41871354782725684,
+  "human_relevance_evaluation": "pending; no deterministic relevance labels were fabricated",
+  "evaluation_rule": "Intent agreement uses only non-null curated Phase 3E gold_intent values; Phase 3A corpus intent metadata remains heuristic.",
+  "excluded_golden_ids": [
+    "GS-001",
+    "GS-002",
+    "GS-003",
+    "GS-006",
+    "GS-007",
+    "GS-008",
+    "GS-009",
+    "GS-012",
+    "GS-014",
+    "GS-015",
+    "GS-181",
+    "GS-182",
+    "GS-183",
+    "GS-184",
+    "GS-185",
+    "GS-188",
+    "GS-189",
+    "GS-190",
+    "GS-191",
+    "GS-192",
+    "GS-193",
+    "GS-195",
+    "GS-197",
+    "GS-198",
+    "GS-199",
+    "GS-200"
+  ],
+  "sample_queries": [
+    {
+      "golden_id": "GS-001",
+      "query": "@applesupport MacPro 2013. Yosemite. iTunes 12.7.",
+      "top_retrieval": "@AppleSupport OS X Yosemite and 10.2.1 ...thank you!",
+      "similarity": 0.5820503012822607,
+      "gold_intent": null,
+      "retrieved_intent": null,
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-002",
+      "query": "@AppleSupport 2/2 song from itunes https://t.co/xJ1yBfxuvJ",
+      "top_retrieval": "UM I WAS CHARGED ON MY ITUNES FOR A SONG BUT THE SONG ISNT THERE ????? @AppleSupport help",
+      "similarity": 0.7527154067108326,
+      "gold_intent": null,
+      "retrieved_intent": "app_store_media_services",
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-003",
+      "query": "@AppleSupport Same for music",
+      "top_retrieval": "@357201 @AppleSupport Same on the 6😡😡😡😡",
+      "similarity": 0.7211268363554486,
+      "gold_intent": null,
+      "retrieved_intent": null,
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-004",
+      "query": "@AppleSupport Battery down! Please🙏",
+      "top_retrieval": "tf is up with my battery @AppleSupport",
+      "similarity": 1.0,
+      "gold_intent": "software_update_os",
+      "retrieved_intent": "battery_power_charging",
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-005",
+      "query": "@AppleSupport yes the battery",
+      "top_retrieval": "tf is up with my battery @AppleSupport",
+      "similarity": 1.0,
+      "gold_intent": "performance_stability",
+      "retrieved_intent": "battery_power_charging",
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-006",
+      "query": "@AppleSupport WiFi and streaming.",
+      "top_retrieval": "@AppleSupport Streaming, and yes it happens on WiFi and cellular,",
+      "similarity": 0.7338363245295046,
+      "gold_intent": null,
+      "retrieved_intent": "connectivity_network",
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-007",
+      "query": "@AppleSupport Just Bluetooth Audio",
+      "top_retrieval": "@AppleSupport No they’re no audio at all. It’s an iPhone 7",
+      "similarity": 0.7852903232667279,
+      "gold_intent": null,
+      "retrieved_intent": null,
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-008",
+      "query": "@AppleSupport AirPort, over WiFi.",
+      "top_retrieval": "@AppleSupport It used to show the name of the airport, the wifi. Now it only shows ‘airport music’.",
+      "similarity": 0.7657671097004725,
+      "gold_intent": null,
+      "retrieved_intent": "connectivity_network",
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-009",
+      "query": "@AppleSupport Standard keyboard; iPhone6s",
+      "top_retrieval": "@AppleSupport iPhone6s https://t.co/ormsJ8CcZ7",
+      "similarity": 0.5967875573129073,
+      "gold_intent": null,
+      "retrieved_intent": null,
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    },
+    {
+      "golden_id": "GS-010",
+      "query": "@AppleSupport It doesn't work!",
+      "top_retrieval": "@AppleSupport Yes and it still doesn’t work",
+      "similarity": 1.0,
+      "gold_intent": "apple_id_icloud_account",
+      "retrieved_intent": null,
+      "deterministic_intent_agreement": false,
+      "human_relevance": "pending"
+    }
+  ],
+  "limitations": [
+    "Lexical TF-IDF similarity does not understand synonyms, paraphrases, or conversation semantics.",
+    "Retrieved intent metadata is derived from Phase 3A lexical rules and is not human gold truth.",
+    "Same-message and same-conversation records are excluded to reduce source leakage.",
+    "Human relevance judgments remain pending."
+  ],
+  "output_files": {
+    "results": "outputs\\phase4\\retrieval\\retrieval_results.jsonl",
+    "summary": "outputs\\phase4\\retrieval\\retrieval_summary.json",
+    "report": "outputs\\phase4\\reports\\PHASE4_RETRIEVAL_REPORT.md"
+  }
+}

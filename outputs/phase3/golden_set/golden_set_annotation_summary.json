@@ -1,0 +1,59 @@
+{
+  "phase": "3E",
+  "total_records": 200,
+  "review_queue_records": 50,
+  "context_matches": 50,
+  "resolved_count": 166,
+  "unresolved_count": 34,
+  "resolved_from_context_count": 16,
+  "resolved_from_text_count": 150,
+  "genuinely_ambiguous_count": 8,
+  "insufficient_evidence_count": 26,
+  "gold_intent_distribution": {
+    "app_store_media_services": 14,
+    "apple_id_icloud_account": 11,
+    "apple_watch": 6,
+    "battery_power_charging": 11,
+    "billing_purchases_subscriptions": 9,
+    "connectivity_network": 9,
+    "device_setup_activation_migration": 11,
+    "hardware_accessories": 10,
+    "keyboard_text_rendering": 10,
+    "mac_computer": 8,
+    "messaging_calls_facetime": 11,
+    "performance_stability": 11,
+    "software_update_os": 38,
+    "store_orders_repairs": 8,
+    "support_contact_experience": 7
+  },
+  "escalation_distribution": {
+    "true": 49,
+    "false": 117,
+    "null": 34
+  },
+  "historical_response_availability": {
+    "available": 20,
+    "null": 180
+  },
+  "remaining_null_fields": {
+    "gold_intent": 26,
+    "gold_response": 180,
+    "should_escalate": 34,
+    "retrieval_relevance": 200,
+    "response_grounding": 200,
+    "response_quality": 200
+  },
+  "annotation_provenance": "Phase 3D inheritance for high-confidence records; otherwise exact Phase 2 conversation context plus Phase 3A taxonomy evidence. No external model or human review was used.",
+  "limitations": [
+    "Phase 3A taxonomy labels remain discovery labels, not independently human-validated truth.",
+    "Historical responses are copied only when the immediate brand response passes a conservative direct-relevance rule.",
+    "Null gold intents and responses are retained when historical evidence is insufficient.",
+    "This phase does not evaluate retrieval, grounding, or response quality."
+  ],
+  "output_files": {
+    "annotated_golden_set": "outputs\\phase3\\golden_set\\golden_evaluation_set_annotated.jsonl",
+    "decisions": "outputs\\phase3\\golden_set\\golden_set_annotation_decisions.jsonl",
+    "summary": "outputs\\phase3\\golden_set\\golden_set_annotation_summary.json",
+    "report": "outputs\\phase3\\reports\\PHASE3E_REVIEW_RESOLUTION_REPORT.md"
+  }
+}
