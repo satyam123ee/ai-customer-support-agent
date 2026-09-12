@@ -275,6 +275,30 @@ outputs/phase5/evidence/historical_evidence_summary.json
 outputs/phase5/reports/PHASE5_HISTORICAL_EVIDENCE_REPORT.md
 work/phase5_validate.py
 
+### Phase 6 — Grounded AI Response Generation
+
+STATUS: COMPLETE
+
+Goal achieved:
+
+Built a deterministic historical-grounding response baseline using only Phase 5 evidence selected from Phase 4 retrieval results.
+
+Results:
+- Exactly 200 golden queries represented.
+- 177 responses copied verbatim from usable historical diagnostic/direct-guidance evidence.
+- 23 queries marked insufficient historical evidence with no fabricated response.
+- No external API or LLM was used.
+- Source query text, evidence IDs, and historical response provenance were preserved.
+- Independent validation passed, including deterministic rerun validation.
+
+Files:
+
+outputs/phase6/scripts/generate_grounded_responses.py
+outputs/phase6/generation/golden_grounded_responses.jsonl
+outputs/phase6/generation/phase6_generation_summary.json
+outputs/phase6/reports/PHASE6_GROUNDED_RESPONSE_REPORT.md
+work/phase6_validate.py
+
 ## Important Constraints
 
 - Use the full dataset.

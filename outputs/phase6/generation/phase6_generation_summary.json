@@ -1,0 +1,41 @@
+{
+  "phase": "6",
+  "total_queries": 200,
+  "usable_evidence_selected": 177,
+  "weak_or_no_usable_evidence": 23,
+  "responses_copied_verbatim": 177,
+  "grounding_status_distribution": {
+    "grounded_historical_response": 177,
+    "insufficient_historical_evidence": 23
+  },
+  "response_type_distribution": {
+    "diagnostic_question": 143,
+    "direct_guidance": 34
+  },
+  "needs_escalation_distribution": {
+    "true": 10,
+    "false": 177,
+    "null": 13
+  },
+  "unsupported_content_risk_distribution": {
+    "low": 177,
+    "not_applicable": 23
+  },
+  "methodology": {
+    "selection": "Choose the highest deterministic Phase 5 evidence score among candidates with historical response, score >= 0.35, and response_type diagnostic_question or direct_guidance.",
+    "generation": "Copy the selected historical response verbatim; no new troubleshooting steps or product claims are generated.",
+    "insufficient_evidence": "Return generated_response null and mark grounding insufficient when no usable historical response exists.",
+    "human_labels": "No human response-quality labels are assigned."
+  },
+  "limitations": [
+    "This is a deterministic historical-response copying baseline, not an LLM response generator.",
+    "A historically useful response may still be wrong for the current query; semantic human review remains necessary.",
+    "Generic routing responses are not selected as generated answers.",
+    "No external API or LLM was used."
+  ],
+  "output_files": {
+    "responses": "outputs\\phase6\\generation\\golden_grounded_responses.jsonl",
+    "summary": "outputs\\phase6\\generation\\phase6_generation_summary.json",
+    "report": "outputs\\phase6\\reports\\PHASE6_GROUNDED_RESPONSE_REPORT.md"
+  }
+}
