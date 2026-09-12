@@ -251,6 +251,30 @@ outputs/phase4/retrieval/retrieval_summary.json
 outputs/phase4/reports/PHASE4_RETRIEVAL_REPORT.md
 work/phase4_validate.py
 
+### Phase 5 — Historical-Evidence Evaluation
+
+STATUS: COMPLETE
+
+Goal achieved:
+
+Built a deterministic evidence layer over the Phase 4 retrieval results to identify historical response evidence without fabricating human relevance labels.
+
+Results:
+- 200 golden queries and 1,000 retrieved candidates evaluated.
+- 174 queries eligible for curated-intent evidence metrics; 26 null-gold-intent queries excluded from intent metrics.
+- 883 retrieved candidates contain historical AppleSupport responses.
+- Top-1/top-3/top-5 deterministic evidence coverage: 86.78%, 97.70%, and 99.43% of eligible queries.
+- Human relevance remains pending; deterministic evidence scores are not human relevance labels.
+- Independent validation passed, including source fidelity and deterministic rerun validation.
+
+Files:
+
+outputs/phase5/scripts/evaluate_historical_evidence.py
+outputs/phase5/evidence/historical_evidence_results.jsonl
+outputs/phase5/evidence/historical_evidence_summary.json
+outputs/phase5/reports/PHASE5_HISTORICAL_EVIDENCE_REPORT.md
+work/phase5_validate.py
+
 ## Important Constraints
 
 - Use the full dataset.

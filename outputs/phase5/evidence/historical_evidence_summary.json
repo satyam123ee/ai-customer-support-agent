@@ -1,0 +1,64 @@
+{
+  "phase": "5",
+  "total_golden_queries": 200,
+  "eligible_queries": 174,
+  "excluded_null_gold_intent_queries": 26,
+  "total_retrieved_candidates": 1000,
+  "candidates_with_historical_responses": 883,
+  "distribution_of_deterministic_evidence_scores": {
+    "moderate": 875,
+    "strong": 8,
+    "weak": 117
+  },
+  "heuristic_evidence_coverage": {
+    "top_1": {
+      "covered_eligible_queries": 151,
+      "eligible_queries": 174,
+      "coverage": 0.867816091954023,
+      "rule": "At least one retrieved candidate in the cutoff has a historical response and provisional heuristic evidence score >= 0.35."
+    },
+    "top_3": {
+      "covered_eligible_queries": 170,
+      "eligible_queries": 174,
+      "coverage": 0.9770114942528736,
+      "rule": "At least one retrieved candidate in the cutoff has a historical response and provisional heuristic evidence score >= 0.35."
+    },
+    "top_5": {
+      "covered_eligible_queries": 173,
+      "eligible_queries": 174,
+      "coverage": 0.9942528735632183,
+      "rule": "At least one retrieved candidate in the cutoff has a historical response and provisional heuristic evidence score >= 0.35."
+    }
+  },
+  "response_type_distribution": {
+    "acknowledgement_or_other": 126,
+    "diagnostic_question": 321,
+    "direct_guidance": 71,
+    "generic_routing": 365,
+    "none": 117
+  },
+  "queries_with_no_usable_historical_response": [
+    "GS-186"
+  ],
+  "human_relevance": "pending; deterministic evidence is not a human relevance judgment",
+  "deterministic_scoring_rules": {
+    "response_availability": 0.35,
+    "query_customer_overlap": 0.25,
+    "query_response_overlap": 0.25,
+    "curated_intent_agreement": "diagnostic metadata only; excluded from score",
+    "strong_threshold": 0.65,
+    "moderate_threshold": 0.35,
+    "threshold_status": "provisional heuristic; not calibrated against human judgments"
+  },
+  "limitations": [
+    "Lexical overlap does not establish semantic relevance or answer correctness.",
+    "Retrieved intent metadata is Phase 3A heuristic evidence, not human truth.",
+    "Null gold-intent queries are excluded from intent-based metrics but still receive evidence signals.",
+    "Human relevance judgments remain pending."
+  ],
+  "output_files": {
+    "results": "outputs\\phase5\\evidence\\historical_evidence_results.jsonl",
+    "summary": "outputs\\phase5\\evidence\\historical_evidence_summary.json",
+    "report": "outputs\\phase5\\reports\\PHASE5_HISTORICAL_EVIDENCE_REPORT.md"
+  }
+}
