@@ -1,0 +1,32 @@
+{
+  "phase": 8,
+  "total_queries": 200,
+  "decision_counts": {
+    "auto_handle": 117,
+    "escalate": 83
+  },
+  "decision_percentages": {
+    "auto_handle": 58.5,
+    "escalate": 41.5
+  },
+  "auto_handle_grounded_response_coverage": 100.0,
+  "escalated_without_generated_response": 83,
+  "preliminary_reference_comparison": {
+    "comparable_queries": 166,
+    "agreement_count": 143,
+    "agreement_percentage": 86.14,
+    "warning": "Phase 3E should_escalate is not human gold and was not used to make Phase 7 decisions."
+  },
+  "human_evaluation": {
+    "retrieval_relevance": "pending",
+    "response_grounding": "pending human review despite provenance checks",
+    "response_quality": "pending",
+    "escalation_correctness": "pending",
+    "gold_labels": false
+  },
+  "proof_checks": {
+    "all_queries_covered": true,
+    "auto_handle_responses_present": true,
+    "escalations_have_no_generated_response": true
+  }
+}

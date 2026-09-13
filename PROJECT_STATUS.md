@@ -307,3 +307,53 @@ work/phase6_validate.py
 - Use streaming/chunked processing for large CSV files.
 - Keep generated large files local when possible.
 - Every major result should be reproducible from a script.
+### Phase 7 — Auto-Handle vs Escalation Decision System
+
+STATUS: COMPLETE
+
+Results:
+- 200 Golden Set queries processed deterministically.
+- Auto-handle: 117 (58.5%).
+- Escalate: 83 (41.5%).
+- No external API or LLM used.
+- Phase 3E escalation values were not used as ground truth.
+- Phase 7 validator passed and deterministic rerun matched.
+
+Files:
+
+outputs/phase7/scripts/decide_escalation.py
+outputs/phase7/decisions/escalation_decisions.jsonl
+outputs/phase7/decisions/phase7_decision_summary.json
+outputs/phase7/reports/PHASE7_ESCALATION_DECISION_REPORT.md
+work/phase7_validate.py
+
+### Phase 8 — Evaluation & Proof
+
+STATUS: COMPLETE
+
+Results:
+- 200/200 queries covered.
+- 100% of auto-handled cases have grounded Phase 6 responses.
+- 100% of escalated cases contain no generated response.
+- Phase 3E preliminary-reference agreement: 86.14% across 166 comparable records; diagnostic only, not accuracy.
+- Human evaluation remains pending.
+
+Files:
+
+outputs/phase8/scripts/evaluate_phase7.py
+outputs/phase8/evaluation/phase8_evaluation_results.json
+outputs/phase8/evaluation/phase8_evaluation_summary.json
+outputs/phase8/reports/PHASE8_EVALUATION_REPORT.md
+
+### Phase 9 — Final Submission & Proof Package
+
+STATUS: COMPLETE
+
+Created the final submission report, checklist, and manifest. The final share package excludes twcs.csv, .env, .venv, and .git.
+
+Files:
+
+outputs/phase9/generate_final_report.py
+outputs/phase9/reports/FINAL_SUBMISSION_REPORT.md
+outputs/phase9/reports/FINAL_SUBMISSION_CHECKLIST.md
+outputs/phase9/reports/FINAL_SUBMISSION_MANIFEST.md

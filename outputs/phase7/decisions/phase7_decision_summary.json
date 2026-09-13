@@ -1,0 +1,34 @@
+{
+  "phase": 7,
+  "total_queries": 200,
+  "auto_handle_count": 117,
+  "auto_handle_percentage": 58.5,
+  "escalation_count": 83,
+  "escalation_percentage": 41.5,
+  "escalation_reason_distribution": {
+    "ambiguous_request": 25,
+    "insufficient_historical_evidence": 15,
+    "account_or_security_sensitive": 14,
+    "billing_or_payment_case_specific": 18,
+    "order_repair_case_specific": 11
+  },
+  "evidence_availability_distribution": {
+    "available": 177,
+    "unavailable": 23
+  },
+  "response_type_distribution": {
+    "diagnostic_question": 143,
+    "none": 23,
+    "direct_guidance": 34
+  },
+  "decision_distribution": {
+    "escalate": 83,
+    "auto_handle": 117
+  },
+  "methodology": {
+    "decision_method": "deterministic_rule_based",
+    "threshold": 0.35,
+    "phase3e_should_escalate": "comparison-only preliminary_annotated_reference; never used to determine decisions",
+    "human_validation": false
+  }
+}
