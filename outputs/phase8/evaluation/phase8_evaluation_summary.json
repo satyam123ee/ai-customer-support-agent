@@ -17,11 +17,30 @@
     "agreement_percentage": 86.14,
     "warning": "Phase 3E should_escalate is not human gold and was not used to make Phase 7 decisions."
   },
+  "baselines": {
+    "trivial_baseline": {
+      "definition": "Always return the single most frequent historical response in the retrieval corpus.",
+      "nonempty_response_rate": 88.3,
+      "most_frequent_response_count": 3,
+      "most_frequent_response": "@375679 We want you to have a good battery. What is the exact issue that is happening with it?"
+    },
+    "simple_baseline": {
+      "definition": "Return the raw TF-IDF top-1 historical response without evidence thresholds, response-type filtering, or escalation policy.",
+      "intent_agreement_comparable": 174,
+      "intent_agreement_percentage": 59.2,
+      "note": "Intent agreement uses the gold intent appearing in the retrieved row intent_ids. It is a retrieval diagnostic, not response quality."
+    },
+    "our_system": {
+      "definition": "Phase 5 evidence scoring + Phase 6 conservative grounded response + Phase 7 escalation policy."
+    },
+    "warning": "Response-quality comparison is intentionally deferred to the LLM judge/human calibration subset; deterministic intent agreement is not response quality."
+  },
   "human_evaluation": {
-    "retrieval_relevance": "pending",
-    "response_grounding": "pending human review despite provenance checks",
-    "response_quality": "pending",
-    "escalation_correctness": "pending",
+    "calibration_status": "pending",
+    "retrieval_relevance": "pending unless human agreement summary exists",
+    "response_grounding": "pending unless human agreement summary exists",
+    "response_quality": "pending unless human agreement summary exists",
+    "escalation_correctness": "pending unless human agreement summary exists",
     "gold_labels": false
   },
   "proof_checks": {

@@ -1,36 +1,39 @@
 # Hiver SDE Intern — Final Evaluation & Proof
 
-## Scope
-Completed deterministic baseline workflow for the AppleSupport slice of the Customer Support on Twitter dataset through Phase 9. No human validation is claimed where labels are absent.
+## 1. Problem framing
+Brand: **AppleSupport**. The system classifies customer issues, retrieves historically similar AppleSupport interactions, drafts only evidence-backed replies, and escalates cases where evidence or risk is not sufficient.
 
-## Completed phases
-- Phase 1: Brand selection — AppleSupport.
-- Phase 2: Streaming/chunked data preparation.
-- Phase 3A–3E: intent discovery, candidate pool, golden set, preliminary annotation, and deterministic review-queue resolution.
-- Phase 4: TF-IDF historical retrieval baseline.
-- Phase 5: deterministic historical-evidence scoring.
-- Phase 6: grounded historical-response baseline.
-- Phase 7: conservative auto-handle vs escalation decision system.
-- Phase 8: deterministic evaluation/proof and preliminary-reference comparison.
-- Phase 9: final submission/evidence package.
+**Not built:** authenticated account actions, refunds, order changes, private customer-data access, or a production UI. Those require tools/permissions absent from TWCS.
 
-## Phase 7 results
-- Total queries: 200
-- Auto-handle: 117 (58.5%)
-- Escalate: 83 (41.5%)
-- Escalation reasons: {"account_or_security_sensitive": 14, "ambiguous_request": 25, "billing_or_payment_case_specific": 18, "insufficient_historical_evidence": 15, "order_repair_case_specific": 11}
+## 2. Headline results
+- Golden evaluation set: **200** examples.
+- TF-IDF retrieval: top-1 intent agreement **59.20%**, top-3 **75.86%**, top-5 **82.18%** on the eligible retrieval evaluation.
+- Phase 6 selected usable grounded historical responses for **177/200** examples; 23 had no usable response selected.
+- Phase 7: **117 auto-handle (58.5%)**, **83 escalate (41.5%)**.
+- All auto-handled cases have grounded responses; all escalated cases have no generated response.
 
-## Phase 8 proof
-- All 200 queries covered: True
-- Auto-handled responses present: True
-- Escalations contain no generated response: True
-- Preliminary Phase 3E reference agreement: 86.14% across 166 comparable records. Diagnostic only; not accuracy.
+## 3. Baselines
+### Trivial baseline
+Always return the single most frequent historical response. It has no query-specific retrieval or safety reasoning.
 
-## Human evaluation required
-Retrieval relevance, response quality, response grounding correctness, and escalation correctness still require human evaluation. Deterministic checks establish provenance, consistency, reproducibility, and policy execution; they do not prove every response is correct.
+### Simple baseline
+Return the raw TF-IDF top-1 historical response with no evidence threshold, response-type filtering, or escalation policy. Top-1 intent agreement is **59.2%** on 174 comparable examples.
 
-## Submission safety
-- `twcs.csv` is not included.
-- No external API or LLM dependency is required for this baseline.
-- Phase 1–6 artifacts are treated as immutable inputs.
-- Review the final diff before committing/pushing.
+### Our system
+Adds evidence scoring, conservative grounded-response selection, and explicit escalation safeguards. Response quality is evaluated separately with the LLM judge rather than treating intent agreement as response quality.
+
+## 4. LLM-as-judge and human agreement
+Rubric: retrieval relevance (1–5), response grounding (1–5), response quality (1–5), escalation correctness (boolean), and overall acceptability (boolean).
+
+Calibration status: **PENDING — fill the 30-row human calibration CSV, run the LLM judge, then run the agreement script.**
+
+The repository includes a 30-case human calibration sheet and scripts to run an OpenAI-compatible judge and compute exact/within-one agreement, MAE, Pearson correlation, and binary agreement. **No human agreement number is fabricated.**
+
+## 5. Failure analysis
+See `outputs/phase8/reports/FAILURE_ANALYSIS.md`. The five observed risk modes are: ambiguous/incomplete requests, billing/payment cases, insufficient historical evidence, account/security-sensitive cases, and order/repair/service cases. These are not all proven model errors; several are deliberate safety escalations.
+
+## 6. What is misleading about my headline number?
+The **86.14% Phase 3E escalation-reference agreement** is *not* 86.14% accuracy. It is agreement with an internal deterministic/reference annotation process, and only 166 records were comparable. It is not independently human-validated ground truth. Similarly, retrieval intent agreement is not response quality, and the 58.5% auto-handle rate is not a success rate. The defensible claim is that the pipeline is reproducible and policy-consistent; independent human evaluation is required for quality claims.
+
+## 7. Reproducibility and safety
+The Phase 7–9 proof can be rerun from committed intermediate artifacts without the 493 MB raw dataset. `twcs.csv` remains local/ignored. The LLM judge is optional for the deterministic baseline and its API key is never stored in the repository.

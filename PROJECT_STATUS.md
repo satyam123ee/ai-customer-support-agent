@@ -357,3 +357,42 @@ outputs/phase9/generate_final_report.py
 outputs/phase9/reports/FINAL_SUBMISSION_REPORT.md
 outputs/phase9/reports/FINAL_SUBMISSION_CHECKLIST.md
 outputs/phase9/reports/FINAL_SUBMISSION_MANIFEST.md
+
+### Phase 8 — Evaluation Harness Expansion
+
+STATUS: COMPLETE FOR DETERMINISTIC COMPONENTS; HUMAN/LLM CALIBRATION PENDING
+
+Added:
+- trivial baseline definition
+- simple raw TF-IDF top-1 baseline
+- 30-case human calibration sheet generator
+- OpenAI-compatible LLM-as-judge runner
+- human-vs-LLM agreement scorer
+- explicit warning that internal/reference agreement is not human accuracy
+
+Files:
+
+outputs/phase8/scripts/build_baselines.py
+outputs/phase8/scripts/build_human_judge_sample.py
+outputs/phase8/scripts/run_llm_judge.py
+outputs/phase8/scripts/score_human_judge_agreement.py
+outputs/phase8/baselines/baseline_summary.json
+outputs/phase8/human/human_judge_sample.csv
+
+### Failure Analysis
+
+STATUS: COMPLETE
+
+Five observed risk/failure modes with real golden-set examples are documented in:
+
+outputs/phase8/reports/FAILURE_ANALYSIS.md
+
+### Final Submission Report
+
+STATUS: COMPLETE; LLM/HUMAN CALIBRATION IS THE ONLY OPEN EVIDENCE ITEM
+
+Final report:
+
+outputs/phase9/reports/FINAL_SUBMISSION_REPORT.md
+
+The report explicitly separates deterministic proof from human-validated quality claims and includes the mandatory “What is misleading about my headline number?” section.
